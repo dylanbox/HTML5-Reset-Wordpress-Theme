@@ -11,12 +11,12 @@
 <!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
-<!-- the "no-js" class is for Modernizr. --> 
+<!-- the "no-js" class is for Modernizr. -->
 
 <head id="<?php echo of_get_option('meta_headid'); ?>" data-template-set="html5-reset-wordpress-theme">
 
 	<meta charset="<?php bloginfo('charset'); ?>">
-	
+
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 	<!--[if IE ]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,7 +32,7 @@
 	<!--Google will often use this as its description of your page/site. Make it good.-->
 
 	<?php if (true == of_get_option('meta_author')) echo '<meta name="author" content="'.of_get_option("meta_author").'" />'; ?>
-	
+
 	<?php if (true == of_get_option('meta_google')) echo '<meta name="google-site-verification" content="'.of_get_option("meta_google").'" />'; ?>
 
 	<meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
@@ -40,13 +40,13 @@
 	<?php if (true == of_get_option('meta_viewport')) {
 	echo '<meta name="viewport" content="'.of_get_option("meta_viewport").'" />';
 	echo '<!--  Mobile Viewport Fix
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
 	device-width : Occupy full width of the screen in its current orientation
 	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
 	-->';
 	} ?>
-	
+
 	<?php if (true == of_get_option('head_favicon')) {
 	echo '<link rel="shortcut icon" href="'.of_get_option("head_favicon").'" />';
 	echo '<!-- This is the traditional favicon.
@@ -63,11 +63,14 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->';
 	} ?>
 
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Montserrat' rel='stylesheet' type='text/css'>
+
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
-	
-	<!-- This is an un-minified, complete version of Modernizr. 
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/osborn.css" />
+
+	<!-- This is an un-minified, complete version of Modernizr.
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
 	<script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr-2.6.2.dev.js"></script>
 
@@ -111,7 +114,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 	<div id="wrapper">
 	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
@@ -119,7 +122,7 @@
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<div class="description"><?php bloginfo( 'description' ); ?></div>
 		</header>
-		
+
 		<nav id="nav" role="navigation">
 			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
 		</nav>
