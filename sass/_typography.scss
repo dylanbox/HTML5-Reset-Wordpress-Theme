@@ -6,10 +6,25 @@ body{
     font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFontFamily;
+    font-weight: 400;
+    &.subheader {
+        text-transform: uppercase;
+    }
+    &.small {
+        font-family: $bodyFontFamily;
+    }
+}
+
 select, input, textarea {color: #333;}
 
-a {color: #03f;}
-a:hover {color: #69f;}
+a {
+    color: #03f;
+    &:hover {
+        color: #69f;
+    }
+}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}

@@ -1,0 +1,71 @@
+ol.commentlist {
+    list-style: none;
+    li {
+        &.alt!, &.bypostauthor!, &.byuser!, &.comment-author-admin! {}
+        &.comment {
+            border-bottom: 1px dotted #666;
+            padding: 10px;
+            div {
+                &.comment-author! {}
+                &.vcard {
+                    cite.fn {
+                        font-style: normal;
+                        a.url! {}
+                    }
+                    img {
+                        &.avatar {
+                            float: right;
+                            margin: 0 0 10px 10px;
+                        }
+                        &.avatar-32!, &.photo! {}
+                    }
+                    span.says! {}
+                }
+                &.commentmetadata! {}
+                &.comment-meta {
+                    font-size: 10px;
+                    a {
+                        color: #ccc;
+                    }
+                }
+            }
+            p!, ul! {}
+            div.reply {
+                font-size: 11px;
+                a {
+                    font-weight: bold;
+                }
+            }
+            ul.children {
+                list-style: none;
+                margin: 10px 0 0;
+                li {
+                    &.alt!, &.bypostauthor!, &.byuser!, &.comment!, &.comment-author-admin! {}
+                    &.depth-2 {
+                        border-left: 5px solid #555;
+                        margin: 0 0 10px 10px;
+                    }
+                    &.depth-3 {
+                        border-left: 5px solid #999;
+                        margin: 0 0 10px 10px;
+                    }
+                    &.depth-4 {
+                        border-left: 5px solid #bbb;
+                        margin: 0 0 10px 10px;
+                    }
+                    &.depth-5!, &.odd! {}
+                }
+            }
+        }
+        &.even {
+            background: #fff;
+        }
+        &.odd {
+            background: #f6f6f6;
+        }
+        &.parent {
+            border-left: 5px solid #111;
+        }
+        &.thread-alt!, &.thread-even!, &.thread-odd! {}
+    }
+}
