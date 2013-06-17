@@ -356,34 +356,24 @@ a:hover {
 }
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-/* line 30, sass/_typography.scss */
-::-moz-selection {
-  background: #fcd700;
-  color: #fff;
-  text-shadow: none;
-}
-
-/* line 31, sass/_typography.scss */
-::selection {
-  background: #fcd700;
-  color: #fff;
-  text-shadow: none;
-}
-
+/*
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+*/
 /*	j.mp/webkit-tap-highlight-color */
-/* line 34, sass/_typography.scss */
+/* line 36, sass/_typography.scss */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 36, sass/_typography.scss */
+/* line 38, sass/_typography.scss */
 ins {
   background-color: #fcd700;
   color: #000;
   text-decoration: none;
 }
 
-/* line 37, sass/_typography.scss */
+/* line 39, sass/_typography.scss */
 mark {
   background-color: #fcd700;
   color: #000;
@@ -392,29 +382,330 @@ mark {
 }
 
 /* Mozilla dosen't style place holders by default */
-/* line 40, sass/_typography.scss */
+/* line 42, sass/_typography.scss */
 input:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* line 41, sass/_typography.scss */
+/* line 43, sass/_typography.scss */
 textarea:-moz-placeholder {
   color: #a9a9a9;
 }
 
+@font-face {
+  font-family: 'osborn';
+  src: url("font/osborn.eot?57050711");
+  src: url("font/osborn.eot?57050711#iefix") format("embedded-opentype"), url("font/osborn.woff?57050711") format("woff"), url("font/osborn.ttf?57050711") format("truetype"), url("font/osborn.svg?57050711#osborn") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'osborn';
+    src: url('../font/osborn.svg?57050711#osborn') format('svg');
+  }
+}
+*/
+/* line 67, sass/_typography.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "osborn";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 98, sass/_typography.scss */
+.icon-left:before {
+  content: '\e80e';
+}
+
+/* line 99, sass/_typography.scss */
+.icon-up:before {
+  content: '\e810';
+}
+
+/* line 100, sass/_typography.scss */
+.icon-right:before {
+  content: '\e80f';
+}
+
+/* line 101, sass/_typography.scss */
+.icon-down:before {
+  content: '\e80d';
+}
+
+/* line 102, sass/_typography.scss */
+.icon-home:before {
+  content: '\e802';
+}
+
+/* line 103, sass/_typography.scss */
+.icon-edit:before {
+  content: '\e809';
+}
+
+/* line 104, sass/_typography.scss */
+.icon-ok:before {
+  content: '\e819';
+}
+
+/* line 105, sass/_typography.scss */
+.icon-cancel:before {
+  content: '\e818';
+}
+
+/* line 106, sass/_typography.scss */
+.icon-help-circled:before {
+  content: '\e804';
+}
+
+/* line 107, sass/_typography.scss */
+.icon-info-circled:before {
+  content: '\e803';
+}
+
+/* line 108, sass/_typography.scss */
+.icon-print:before {
+  content: '\e808';
+}
+
+/* line 109, sass/_typography.scss */
+.icon-comment:before {
+  content: '\e811';
+}
+
+/* line 110, sass/_typography.scss */
+.icon-chat:before {
+  content: '\e80a';
+}
+
+/* line 111, sass/_typography.scss */
+.icon-location:before {
+  content: '\e80b';
+}
+
+/* line 112, sass/_typography.scss */
+.icon-spin5:before {
+  content: '\e813';
+}
+
+/* line 113, sass/_typography.scss */
+.icon-twitter:before {
+  content: '\e807';
+}
+
+/* line 114, sass/_typography.scss */
+.icon-facebook:before {
+  content: '\e806';
+}
+
+/* line 115, sass/_typography.scss */
+.icon-menu:before {
+  content: '\e81d';
+}
+
+/* line 116, sass/_typography.scss */
+.icon-mail-alt:before {
+  content: '\e81b';
+}
+
+/* line 117, sass/_typography.scss */
+.icon-food:before {
+  content: '\e81a';
+}
+
+/* line 118, sass/_typography.scss */
+.icon-mobile:before {
+  content: '\e817';
+}
+
+/* line 119, sass/_typography.scss */
+.icon-lock-open-alt:before {
+  content: '\e805';
+}
+
+/* line 120, sass/_typography.scss */
+.icon-graduation-cap:before {
+  content: '\e814';
+}
+
+/* line 121, sass/_typography.scss */
+.icon-user:before {
+  content: '\e801';
+}
+
+/* line 122, sass/_typography.scss */
+.icon-users:before {
+  content: '\e800';
+}
+
+/* line 123, sass/_typography.scss */
+.icon-briefcase:before {
+  content: '\e815';
+}
+
+/* line 124, sass/_typography.scss */
+.icon-calendar-1:before {
+  content: '\e812';
+}
+
+/* line 125, sass/_typography.scss */
+.icon-phone:before {
+  content: '\e80c';
+}
+
+/* line 126, sass/_typography.scss */
+.icon-camera-1:before {
+  content: '\e816';
+}
+
+/* line 127, sass/_typography.scss */
+.icon-search:before {
+  content: '\e81c';
+}
+
+/*
+   Animation example, for spinners
+*/
+/* line 133, sass/_typography.scss */
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+
+@-moz-keyframes spin {
+  /* line 141, sass/_typography.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 148, sass/_typography.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  /* line 156, sass/_typography.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 163, sass/_typography.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  /* line 171, sass/_typography.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 178, sass/_typography.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  /* line 186, sass/_typography.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 193, sass/_typography.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  /* line 201, sass/_typography.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 208, sass/_typography.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
 /* line 1, sass/_header.scss */
 #header {
-  overflow: auto;
+  background: #f37c68;
 }
 /* line 3, sass/_header.scss */
+#header a {
+  text-decoration: none;
+  color: white;
+}
+/* line 7, sass/_header.scss */
 #header h1 {
   float: left;
 }
-/* line 6, sass/_header.scss */
+/* line 10, sass/_header.scss */
 #header #nav {
   float: right;
 }
-/* line 8, sass/_header.scss */
+/* line 12, sass/_header.scss */
 #header #nav li {
   float: left;
 }

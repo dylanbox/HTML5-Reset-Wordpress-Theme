@@ -1,5 +1,9 @@
 #header {
-    overflow: auto;
+    background: $red;
+    a {
+        text-decoration: none;
+        color: $white;
+    }
     h1 {
         float: left;
     }

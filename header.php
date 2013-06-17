@@ -66,9 +66,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Montserrat' rel='stylesheet' type='text/css'>
 
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/osborn.css" />
 
 	<!-- This is an un-minified, complete version of Modernizr.
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
@@ -116,14 +114,11 @@
 <body <?php body_class(); ?>>
 
 	<div id="wrapper">
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-
 		<header id="header" role="header">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
+		    <div class="row">
+    			<h1 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <nav id="nav" class="columns right" role="navigation">
+        			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
+        		</nav>
+		    </div>
 		</header>
-
-		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
-		</nav>
-
