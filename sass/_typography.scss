@@ -1,5 +1,6 @@
 $bodyFontFamily: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $headerFontFamily: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$iconFontFamily: 'osborn';
 
 body{
     font-family: $bodyFontFamily;
@@ -15,6 +16,30 @@ h1, h2, h3, h4, h5, h6 {
     &.small {
         font-family: $bodyFontFamily;
     }
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
 }
 
 select, input, textarea {color: #333;}
@@ -45,11 +70,11 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 @font-face {
   font-family: 'osborn';
-  src: url('font/osborn.eot?57050711');
-  src: url('font/osborn.eot?57050711#iefix') format('embedded-opentype'),
-       url('font/osborn.woff?57050711') format('woff'),
-       url('font/osborn.ttf?57050711') format('truetype'),
-       url('font/osborn.svg?57050711#osborn') format('svg');
+  src: url('fonts/osborn.eot?57050711');
+  src: url('fonts/osborn.eot?57050711#iefix') format('embedded-opentype'),
+       url('fonts/osborn.woff?57050711') format('woff'),
+       url('fonts/osborn.ttf?57050711') format('truetype'),
+       url('fonts/osborn.svg?57050711#osborn') format('svg');
   font-weight: normal;
   font-style: normal;
 }

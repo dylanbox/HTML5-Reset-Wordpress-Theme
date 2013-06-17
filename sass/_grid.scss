@@ -1,17 +1,26 @@
-$columnPadding: 15px;
+$columnPadding: 30px;
 $rowWidth: 1000px;
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .row {
+    overflow: hidden;
+    width: $rowWidth;
+    max-width: 100%;
     margin: 0 auto;
-    overflow: auto;
-    width: 100%;
-    max-width: $rowWidth;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 .columns {
     float: left;
+    position: relative;
+    min-height: 1px;
     padding: 0 $columnPadding/2;
 }
 
