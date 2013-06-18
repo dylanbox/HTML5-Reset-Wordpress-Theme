@@ -50,6 +50,15 @@ $rowWidth: 1000px;
 
 .chromeframe {position: absolute; top: 0;}
 
+.full-background {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 /* Media Query Inline  use @include media-query($size) {  }  */
 @mixin media-query($maxSize:767px, $minSize:0px) {

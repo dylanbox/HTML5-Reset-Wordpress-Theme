@@ -331,6 +331,17 @@ button {
   top: 0;
 }
 
+/* line 53, sass/_grid.scss */
+.full-background {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* Media Query Inline  use @include media-query($size) {  }  */
 /* line 5, sass/_typography.scss */
 body {
@@ -788,6 +799,11 @@ textarea:-moz-placeholder {
 /* line 42, sass/_header.scss */
 #header #nav li.login a:before {
   content: '\e805';
+}
+
+/* line 1, sass/_pages.scss */
+#homepage {
+  min-height: 325px;
 }
 
 /* line 1, sass/_comments.scss */
