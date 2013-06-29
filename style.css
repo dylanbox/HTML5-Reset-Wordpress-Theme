@@ -301,37 +301,47 @@ button {
 }
 
 /* line 31, sass/_grid.scss */
+.full {
+  width: 100%;
+}
+
+/* line 35, sass/_grid.scss */
 .half {
   width: 50%;
 }
 
-/* line 35, sass/_grid.scss */
+/* line 39, sass/_grid.scss */
 .quarter {
   width: 25%;
 }
 
-/* line 39, sass/_grid.scss */
+/* line 43, sass/_grid.scss */
 .third {
   width: 33.33333%;
 }
 
-/* line 43, sass/_grid.scss */
+/* line 47, sass/_grid.scss */
+.two-thirds {
+  width: 66.66667%;
+}
+
+/* line 51, sass/_grid.scss */
 .fifth {
   width: 20%;
 }
 
-/* line 47, sass/_grid.scss */
+/* line 55, sass/_grid.scss */
 .sixth {
   width: 16.66667%;
 }
 
-/* line 51, sass/_grid.scss */
+/* line 59, sass/_grid.scss */
 .chromeframe {
   position: absolute;
   top: 0;
 }
 
-/* line 53, sass/_grid.scss */
+/* line 61, sass/_grid.scss */
 .full-background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -340,6 +350,11 @@ button {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/* line 71, sass/_grid.scss */
+img {
+  max-width: 100%;
 }
 
 /* Media Query Inline  use @include media-query($size) {  }  */
@@ -799,11 +814,6 @@ textarea:-moz-placeholder {
 /* line 42, sass/_header.scss */
 #header #nav li.login a:before {
   content: '\e805';
-}
-
-/* line 1, sass/_pages.scss */
-#homepage {
-  min-height: 325px;
 }
 
 /* line 1, sass/_comments.scss */

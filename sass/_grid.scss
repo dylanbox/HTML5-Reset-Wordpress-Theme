@@ -28,6 +28,10 @@ $rowWidth: 1000px;
     float: right;
 }
 
+.full {
+    width: 100%;
+}
+
 .half {
     width: 50%;
 }
@@ -38,6 +42,10 @@ $rowWidth: 1000px;
 
 .third {
     width: percentage(1/3);
+}
+
+.two-thirds {
+    width: percentage(2/3);
 }
 
 .fifth {
@@ -58,6 +66,10 @@ $rowWidth: 1000px;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Media Query Inline  use @include media-query($size) {  }  */
