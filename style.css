@@ -403,66 +403,66 @@ img {
   height: auto;
 }
 
-/* line 5, sass/_typography.scss */
+/* line 1, sass/_typography.scss */
 body, p {
   font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-/* line 10, sass/_typography.scss */
+/* line 6, sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }
-/* line 13, sass/_typography.scss */
+/* line 9, sass/_typography.scss */
 h1.subheader, h2.subheader, h3.subheader, h4.subheader, h5.subheader, h6.subheader {
   text-transform: uppercase;
 }
-/* line 16, sass/_typography.scss */
+/* line 12, sass/_typography.scss */
 h1.small, h2.small, h3.small, h4.small, h5.small, h6.small {
   font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-/* line 21, sass/_typography.scss */
+/* line 17, sass/_typography.scss */
 h1 {
   font-size: 30px;
 }
 
-/* line 25, sass/_typography.scss */
+/* line 21, sass/_typography.scss */
 h2 {
   font-size: 24px;
 }
 
-/* line 29, sass/_typography.scss */
+/* line 25, sass/_typography.scss */
 h3 {
   font-size: 20px;
 }
 
-/* line 33, sass/_typography.scss */
+/* line 29, sass/_typography.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 37, sass/_typography.scss */
+/* line 33, sass/_typography.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 41, sass/_typography.scss */
+/* line 37, sass/_typography.scss */
 h6 {
   font-size: 12px;
 }
 
-/* line 45, sass/_typography.scss */
+/* line 41, sass/_typography.scss */
 select, input, textarea {
   color: #333;
 }
 
-/* line 47, sass/_typography.scss */
+/* line 43, sass/_typography.scss */
 a {
   color: #03f;
 }
-/* line 49, sass/_typography.scss */
+/* line 45, sass/_typography.scss */
 a:hover {
   color: #69f;
 }
@@ -473,19 +473,19 @@ a:hover {
 ::selection {background: #fcd700; color: #fff; text-shadow: none;}
 */
 /*	j.mp/webkit-tap-highlight-color */
-/* line 61, sass/_typography.scss */
+/* line 57, sass/_typography.scss */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 63, sass/_typography.scss */
+/* line 59, sass/_typography.scss */
 ins {
   background-color: #fcd700;
   color: #000;
   text-decoration: none;
 }
 
-/* line 64, sass/_typography.scss */
+/* line 60, sass/_typography.scss */
 mark {
   background-color: #fcd700;
   color: #000;
@@ -494,12 +494,12 @@ mark {
 }
 
 /* Mozilla dosen't style place holders by default */
-/* line 67, sass/_typography.scss */
+/* line 63, sass/_typography.scss */
 input:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* line 68, sass/_typography.scss */
+/* line 64, sass/_typography.scss */
 textarea:-moz-placeholder {
   color: #a9a9a9;
 }
@@ -522,7 +522,7 @@ textarea:-moz-placeholder {
   }
 }
 */
-/* line 92, sass/_typography.scss */
+/* line 88, sass/_typography.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "osborn";
   font-style: normal;
@@ -548,152 +548,152 @@ textarea:-moz-placeholder {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-/* line 123, sass/_typography.scss */
+/* line 119, sass/_typography.scss */
 .icon-left:before {
   content: '\e80e';
 }
 
-/* line 124, sass/_typography.scss */
+/* line 120, sass/_typography.scss */
 .icon-up:before {
   content: '\e810';
 }
 
-/* line 125, sass/_typography.scss */
+/* line 121, sass/_typography.scss */
 .icon-right:before {
   content: '\e80f';
 }
 
-/* line 126, sass/_typography.scss */
+/* line 122, sass/_typography.scss */
 .icon-down:before {
   content: '\e80d';
 }
 
-/* line 127, sass/_typography.scss */
+/* line 123, sass/_typography.scss */
 .icon-home:before {
   content: '\e802';
 }
 
-/* line 128, sass/_typography.scss */
+/* line 124, sass/_typography.scss */
 .icon-edit:before {
   content: '\e809';
 }
 
-/* line 129, sass/_typography.scss */
+/* line 125, sass/_typography.scss */
 .icon-ok:before {
   content: '\e819';
 }
 
-/* line 130, sass/_typography.scss */
+/* line 126, sass/_typography.scss */
 .icon-cancel:before {
   content: '\e818';
 }
 
-/* line 131, sass/_typography.scss */
+/* line 127, sass/_typography.scss */
 .icon-help-circled:before {
   content: '\e804';
 }
 
-/* line 132, sass/_typography.scss */
+/* line 128, sass/_typography.scss */
 .icon-info-circled:before {
   content: '\e803';
 }
 
-/* line 133, sass/_typography.scss */
+/* line 129, sass/_typography.scss */
 .icon-print:before {
   content: '\e808';
 }
 
-/* line 134, sass/_typography.scss */
+/* line 130, sass/_typography.scss */
 .icon-comment:before {
   content: '\e811';
 }
 
-/* line 135, sass/_typography.scss */
+/* line 131, sass/_typography.scss */
 .icon-chat:before {
   content: '\e80a';
 }
 
-/* line 136, sass/_typography.scss */
+/* line 132, sass/_typography.scss */
 .icon-location:before {
   content: '\e80b';
 }
 
-/* line 137, sass/_typography.scss */
+/* line 133, sass/_typography.scss */
 .icon-spin5:before {
   content: '\e813';
 }
 
-/* line 138, sass/_typography.scss */
+/* line 134, sass/_typography.scss */
 .icon-twitter:before {
   content: '\e807';
 }
 
-/* line 139, sass/_typography.scss */
+/* line 135, sass/_typography.scss */
 .icon-facebook:before {
   content: '\e806';
 }
 
-/* line 140, sass/_typography.scss */
+/* line 136, sass/_typography.scss */
 .icon-menu:before {
   content: '\e81d';
 }
 
-/* line 141, sass/_typography.scss */
+/* line 137, sass/_typography.scss */
 .icon-mail-alt:before {
   content: '\e81b';
 }
 
-/* line 142, sass/_typography.scss */
+/* line 138, sass/_typography.scss */
 .icon-food:before {
   content: '\e81a';
 }
 
-/* line 143, sass/_typography.scss */
+/* line 139, sass/_typography.scss */
 .icon-mobile:before {
   content: '\e817';
 }
 
-/* line 144, sass/_typography.scss */
+/* line 140, sass/_typography.scss */
 .icon-lock-open-alt:before {
   content: '\e805';
 }
 
-/* line 145, sass/_typography.scss */
+/* line 141, sass/_typography.scss */
 .icon-graduation-cap:before {
   content: '\e814';
 }
 
-/* line 146, sass/_typography.scss */
+/* line 142, sass/_typography.scss */
 .icon-user:before {
   content: '\e801';
 }
 
-/* line 147, sass/_typography.scss */
+/* line 143, sass/_typography.scss */
 .icon-users:before {
   content: '\e800';
 }
 
-/* line 148, sass/_typography.scss */
+/* line 144, sass/_typography.scss */
 .icon-briefcase:before {
   content: '\e815';
 }
 
-/* line 149, sass/_typography.scss */
+/* line 145, sass/_typography.scss */
 .icon-calendar-1:before {
   content: '\e812';
 }
 
-/* line 150, sass/_typography.scss */
+/* line 146, sass/_typography.scss */
 .icon-phone:before {
   content: '\e80c';
 }
 
-/* line 151, sass/_typography.scss */
+/* line 147, sass/_typography.scss */
 .icon-camera-1:before {
   content: '\e816';
 }
 
-/* line 152, sass/_typography.scss */
+/* line 148, sass/_typography.scss */
 .icon-search:before {
   content: '\e81c';
 }
@@ -701,7 +701,7 @@ textarea:-moz-placeholder {
 /*
    Animation example, for spinners
 */
-/* line 158, sass/_typography.scss */
+/* line 154, sass/_typography.scss */
 .animate-spin {
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
@@ -711,7 +711,7 @@ textarea:-moz-placeholder {
 }
 
 @-moz-keyframes spin {
-  /* line 166, sass/_typography.scss */
+  /* line 162, sass/_typography.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -719,7 +719,7 @@ textarea:-moz-placeholder {
     transform: rotate(0deg);
   }
 
-  /* line 173, sass/_typography.scss */
+  /* line 169, sass/_typography.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -729,7 +729,7 @@ textarea:-moz-placeholder {
 }
 
 @-webkit-keyframes spin {
-  /* line 181, sass/_typography.scss */
+  /* line 177, sass/_typography.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -737,7 +737,7 @@ textarea:-moz-placeholder {
     transform: rotate(0deg);
   }
 
-  /* line 188, sass/_typography.scss */
+  /* line 184, sass/_typography.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -747,7 +747,7 @@ textarea:-moz-placeholder {
 }
 
 @-o-keyframes spin {
-  /* line 196, sass/_typography.scss */
+  /* line 192, sass/_typography.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -755,7 +755,7 @@ textarea:-moz-placeholder {
     transform: rotate(0deg);
   }
 
-  /* line 203, sass/_typography.scss */
+  /* line 199, sass/_typography.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -765,7 +765,7 @@ textarea:-moz-placeholder {
 }
 
 @-ms-keyframes spin {
-  /* line 211, sass/_typography.scss */
+  /* line 207, sass/_typography.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -773,7 +773,7 @@ textarea:-moz-placeholder {
     transform: rotate(0deg);
   }
 
-  /* line 218, sass/_typography.scss */
+  /* line 214, sass/_typography.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -783,7 +783,7 @@ textarea:-moz-placeholder {
 }
 
 @keyframes spin {
-  /* line 226, sass/_typography.scss */
+  /* line 222, sass/_typography.scss */
   0% {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -791,7 +791,7 @@ textarea:-moz-placeholder {
     transform: rotate(0deg);
   }
 
-  /* line 233, sass/_typography.scss */
+  /* line 229, sass/_typography.scss */
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);

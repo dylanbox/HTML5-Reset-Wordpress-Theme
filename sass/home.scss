@@ -19,23 +19,52 @@
     }
 }
 
+.banner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: $headerFontFamily;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.posts{
+    .banner {
+        background: $blue;
+    }
+}
+
 .post {
     min-height: 150px;
-    @include transition(.2s);
+    border-bottom: 2px solid $white;
     &:hover {
-        background-position: center top;
-        @include transition(.2s);
+        .content {
+            @include transition(.2s);
+            @include box-shadow(4px 4px $blue);
+            right: 4px;
+            top: -4px;
+        }
+
     }
     .post-link {
         width: 100%;
+        background: transparent;
         position: absolute;
         height: 100%;
         left: 0;
+        @include transition(.2s);
     }
     .content {
         @include transparent-black;
         .title {
             text-transform: uppercase;
         }
+    }
+}
+
+.events{
+    .banner {
+        background: $green;
     }
 }
