@@ -1,4 +1,57 @@
-/* line 1, sass/home.scss */
+/* Media Query Inline  use @include media-query($size) {  }  */
+/* line 15, sass/home.scss */
 #homepage .splash-section {
   min-height: 325px;
+}
+/* line 17, sass/home.scss */
+#homepage .splash-section .content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+/* line 10, sass/home.scss */
+#homepage .splash-section .content a {
+  color: white;
+}
+
+/* line 22, sass/home.scss */
+.post {
+  min-height: 150px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 25, sass/home.scss */
+.post:hover {
+  background-position: center top;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 29, sass/home.scss */
+.post .post-link {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+/* line 35, sass/home.scss */
+.post .content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+/* line 10, sass/home.scss */
+.post .content a {
+  color: white;
+}
+/* line 37, sass/home.scss */
+.post .content .title {
+  text-transform: uppercase;
 }

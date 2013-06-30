@@ -2,7 +2,7 @@ $bodyFontFamily: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helveti
 $headerFontFamily: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $iconFontFamily: 'osborn';
 
-body{
+body, p{
     font-family: $bodyFontFamily;
     font-weight: 400;
 }

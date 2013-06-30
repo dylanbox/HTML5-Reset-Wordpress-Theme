@@ -263,19 +263,26 @@ button {
   zoom: 1;
 }
 
-/* line 4, sass/_grid.scss */
+/* Media Query Inline  use @include media-query($size) {  }  */
+/* line 1, sass/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 6, sass/_grid.scss */
+/* line 3, sass/_grid.scss */
 .row {
   overflow: hidden;
   width: 1000px;
   max-width: 100%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+  /* line 3, sass/_grid.scss */
+  .row {
+    width: auto;
+  }
 }
 /* line 11, sass/_grid.scss */
 .row:before, .row:after {
@@ -294,72 +301,110 @@ button {
   min-height: 1px;
   padding: 0 15px;
 }
-
-/* line 27, sass/_grid.scss */
+/* line 25, sass/_grid.scss */
 .columns.right {
   float: right;
 }
-
+/* line 28, sass/_grid.scss */
+.columns.no-padding {
+  padding: 0;
+}
 /* line 31, sass/_grid.scss */
-.full {
+.columns > .columns {
+  padding: 0;
+}
+
+/* line 36, sass/_grid.scss */
+.twelve {
   width: 100%;
 }
 
-/* line 35, sass/_grid.scss */
-.half {
-  width: 50%;
-}
-
 /* line 39, sass/_grid.scss */
-.quarter {
-  width: 25%;
+.eleven {
+  width: 91.66667%;
 }
 
-/* line 43, sass/_grid.scss */
-.third {
-  width: 33.33333%;
+/* line 42, sass/_grid.scss */
+.ten {
+  width: 83.33333%;
 }
 
-/* line 47, sass/_grid.scss */
-.two-thirds {
+/* line 45, sass/_grid.scss */
+.nine {
+  width: 75%;
+}
+
+/* line 48, sass/_grid.scss */
+.eight {
   width: 66.66667%;
 }
 
 /* line 51, sass/_grid.scss */
-.fifth {
-  width: 20%;
+.seven {
+  width: 58.33333%;
 }
 
-/* line 55, sass/_grid.scss */
-.sixth {
+/* line 54, sass/_grid.scss */
+.six {
+  width: 50%;
+}
+
+/* line 57, sass/_grid.scss */
+.five {
+  width: 41.66667%;
+}
+
+/* line 60, sass/_grid.scss */
+.four {
+  width: 33.33333%;
+}
+
+/* line 63, sass/_grid.scss */
+.three {
+  width: 25%;
+}
+
+/* line 66, sass/_grid.scss */
+.two {
   width: 16.66667%;
 }
 
-/* line 59, sass/_grid.scss */
+/* line 69, sass/_grid.scss */
+.one {
+  width: 8.33333%;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+  /* line 74, sass/_grid.scss */
+  .eleven, .ten, .nine, .eight, .seven, .six, .five, .four, .three, .two, .one {
+    width: auto;
+  }
+}
+/* line 80, sass/_grid.scss */
 .chromeframe {
   position: absolute;
   top: 0;
 }
 
-/* line 61, sass/_grid.scss */
+/* line 82, sass/_grid.scss */
 .full-background {
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-/* line 71, sass/_grid.scss */
+/* line 89, sass/_grid.scss */
 img {
   max-width: 100%;
+  height: auto;
 }
 
-/* Media Query Inline  use @include media-query($size) {  }  */
 /* line 5, sass/_typography.scss */
-body {
+body, p {
   font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }

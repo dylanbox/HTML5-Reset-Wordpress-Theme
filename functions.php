@@ -148,6 +148,6 @@
 	}
 
     add_theme_support('post-thumbnails');
-    include 'cpt-events.php';
+    include 'events/cpt-events.php';
 
 ?>

@@ -1,3 +1,41 @@
+@import "compass/css3";
+@import "_osborn-settings.scss";
+
+@mixin transparent-black {
+    background: rgba(black, .7);
+    color: $white;
+    margin-top: $columnPadding/2;
+    margin-bottom: $columnPadding/2;
+    padding: $columnPadding/2;
+    a {
+        color: $white;
+    }
+}
+
 #homepage .splash-section {
     min-height: 325px;
+    .content {
+        @include transparent-black;
+    }
+}
+
+.post {
+    min-height: 150px;
+    @include transition(.2s);
+    &:hover {
+        background-position: center top;
+        @include transition(.2s);
+    }
+    .post-link {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+    }
+    .content {
+        @include transparent-black;
+        .title {
+            text-transform: uppercase;
+        }
+    }
 }

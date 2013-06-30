@@ -159,11 +159,7 @@ function tf_events_custom_columns($column) {
                 if ($post_image_id) {
                     $thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
                     if ($thumbnail) (string)$thumbnail = $thumbnail[0];
-                    echo '<img src="';
-                    echo bloginfo('template_url');
-                    echo '/timthumb/timthumb.php?src=';
-                    echo $thumbnail;
-                    echo '&h=60&w=60&zc=1" alt="" />';
+                    echo '<img src="'.the_post_thumbnail( array(100,100) ).'" />';
                 }
             break;
             case "tf_col_ev_desc";
@@ -303,7 +299,7 @@ function events_scripts() {
     return;
     wp_enqueue_script('jquery-ui', get_bloginfo('template_url') . '/js/jquery-ui-1.8.9.custom.min.js', array('jquery'));
     wp_enqueue_script('ui-datepicker', get_bloginfo('template_url') . '/js/jquery.ui.datepicker.min.js');
-    wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/pubforce-admin.js', array('jquery'));
+    wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/events-admin.js', array('jquery'));
 }
 
 add_action( 'admin_print_styles-post.php', 'events_styles', 1000 );
