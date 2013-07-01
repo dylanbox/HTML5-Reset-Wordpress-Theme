@@ -1018,61 +1018,86 @@ textarea:-moz-placeholder {
   content: '\e805';
 }
 
-/* line 1, sass/_footer.scss */
+/* line 10, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#pageWrapper {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -37px;
+}
+/* line 18, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#pageWrapper #stickyFooter {
+  height: 37px;
+}
+
+/* line 20, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 37px;
+}
+
+/* line 4, sass/_footer.scss */
 #footer {
   background: #f37c68;
 }
-/* line 3, sass/_footer.scss */
+/* line 6, sass/_footer.scss */
 #footer a {
   text-decoration: none;
   color: white;
   padding: 8px 8px;
   display: inline-block;
 }
-/* line 9, sass/_footer.scss */
+/* line 12, sass/_footer.scss */
 #footer h4 {
   float: left;
   text-transform: uppercase;
   margin: 2px 0 0;
 }
 @media only screen and (max-width: 760px) and (min-width: 0px) {
-  /* line 14, sass/_footer.scss */
+  /* line 17, sass/_footer.scss */
   #footer #footerNav {
     margin: 0px;
   }
 }
-/* line 18, sass/_footer.scss */
+/* line 21, sass/_footer.scss */
 #footer #footerNav li {
   float: left;
 }
-/* line 21, sass/_footer.scss */
+/* line 24, sass/_footer.scss */
 #footer #footerNav li a:before {
   font-family: "osborn";
   font-style: normal;
   font-weight: normal;
   margin-right: 5px;
 }
-/* line 27, sass/_footer.scss */
+/* line 30, sass/_footer.scss */
 #footer #footerNav li a:hover {
   text-decoration: underline;
 }
-/* line 31, sass/_footer.scss */
+/* line 34, sass/_footer.scss */
 #footer #footerNav li.about a:before {
   content: '\e803';
 }
-/* line 34, sass/_footer.scss */
+/* line 37, sass/_footer.scss */
 #footer #footerNav li.team a:before {
   content: '\e800';
 }
-/* line 37, sass/_footer.scss */
+/* line 40, sass/_footer.scss */
 #footer #footerNav li.contact a:before {
   content: '\e80c';
 }
-/* line 40, sass/_footer.scss */
+/* line 43, sass/_footer.scss */
 #footer #footerNav li.resources a:before {
   content: '\e815';
 }
-/* line 43, sass/_footer.scss */
+/* line 46, sass/_footer.scss */
 #footer #footerNav li.login a:before {
   content: '\e805';
 }

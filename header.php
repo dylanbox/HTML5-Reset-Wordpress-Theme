@@ -113,7 +113,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="wrapper">
+	<div id="pageWrapper">
 		<header id="header" role="header">
 		    <div class="row">
     			<h1 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

@@ -5,16 +5,17 @@
  * @since HTML5 Reset 2.0
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright">
-		    <div class="row">
-    			<h4 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h4>
-                <nav id="footerNav" class="columns right" role="navigation">
-        			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
-        		</nav>
-		    </div>
-		</footer>
 
-	</div>
+        <div id="stickyFooter"></div>
+    </div>
+	<footer id="footer" class="source-org vcard copyright">
+	    <div class="row">
+			<h4 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h4>
+            <nav id="footerNav" class="columns right" role="navigation">
+    			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
+    		</nav>
+	    </div>
+	</footer>
 
 	<?php wp_footer(); ?>
 

@@ -1,14 +1,14 @@
 /* Media Query Inline  use @include media-query($size) {  }  */
 /* line 13, sass/home.scss */
 #homepage .splash-section {
-  min-height: 325px;
+  min-height: 300px;
 }
 /* line 15, sass/home.scss */
 #homepage .splash-section .home-text {
   background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 8px;
-  margin-top: 30px;
+  margin: 30px 0;
   padding-bottom: 16px;
 }
 /* line 8, sass/home.scss */

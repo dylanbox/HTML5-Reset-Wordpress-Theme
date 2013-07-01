@@ -1,3 +1,6 @@
+@import "compass/layout/sticky-footer";
+@include sticky-footer(37px, "#pageWrapper", "#stickyFooter", "#footer");
+
 #footer {
     background: $red;
     a {
