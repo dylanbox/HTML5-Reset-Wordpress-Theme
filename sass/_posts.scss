@@ -1,0 +1,61 @@
+.posts{
+    margin-bottom: 30px;
+    .banner {
+        background: $blue;
+    }
+}
+
+.post {
+    min-height: 200px;
+    border-bottom: 2px solid $white;
+    &:hover {
+        .content {
+            .title, .meta, .excerpt {
+                background: $blue;
+                @include transition(.2s);
+            }
+            .meta, .excerpt {
+                right: 0;
+            }
+        }
+    }
+    .post-link {
+        width: 100%;
+        background: transparent;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        @include transition(.2s);
+    }
+    .content {
+        padding-top: 15px;
+        a {
+            text-decoration: none;
+        }
+        .title {
+            text-transform: uppercase;
+            @include transparent-text($blue);
+            padding: 8px;
+            @include media-query() {
+                background-color: $blue;
+            }
+        }
+        .meta, .excerpt {
+            @include transparent-text($blue);
+            position: relative;
+            right: -100%;
+            @include transition(.2s);
+            @include media-query() {
+                right: 0;
+                background-color: $blue;
+            }
+        }
+        .meta {
+            padding-bottom: 0px;
+        }
+        .excerpt {
+            font-size: .9em;
+            padding-top: 0px;
+        }
+    }
+}

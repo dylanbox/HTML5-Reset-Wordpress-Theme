@@ -18,3 +18,12 @@ $grey: #626366;
 @mixin media-query($maxSize:767px, $minSize:0px) {
     @media only screen and (max-width: $maxSize) and (min-width: $minSize) { @content; }
 }
+
+@mixin transparent-text($backgroundColor: black) {
+    background: rgba($backgroundColor, .7);
+    color: $white;
+    padding: 8px;
+    a {
+        color: $white;
+    }
+}

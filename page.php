@@ -5,31 +5,29 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
+    <div class="row">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
+    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<h2><?php the_title(); ?></h2>
+    		<article class="post large-12 columns" id="post-<?php the_ID(); ?>">
 
-			<?php posted_on(); ?>
+    			<h2><?php the_title(); ?></h2>
 
-			<div class="entry">
+    			<?php posted_on(); ?>
 
-				<?php the_content(); ?>
+    			<div class="entry">
 
-				<?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
+    				<?php the_content(); ?>
 
-			</div>
+    				<?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
 
-			<?php edit_post_link(__('Edit this entry.'), '<p>', '</p>'); ?>
+    			</div>
 
-		</article>
-		
-		<?php comments_template(); ?>
+    			<?php edit_post_link(__('Edit this entry.'), '<p>', '</p>'); ?>
+
+    		</article>
 
 		<?php endwhile; endif; ?>
 
-<?php get_sidebar(); ?>
-
+    </div>
 <?php get_footer(); ?>

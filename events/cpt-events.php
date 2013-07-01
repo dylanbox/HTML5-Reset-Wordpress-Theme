@@ -42,9 +42,10 @@ $labels = array(
 );
 
 $args = array(
-    'label' => __('Events'),
+    'label' => array( 'name' => __( 'Events' ),'singular_name' => __( 'Event' )),
     'labels' => $labels,
     'public' => true,
+    'has_archive' => true,
     'can_export' => true,
     'show_ui' => true,
     '_builtin' => false,

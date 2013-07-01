@@ -60,6 +60,24 @@ a {
     }
 }
 
+.banner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: $headerFontFamily;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: 2px solid $white;
+}
+
+.read-more {
+    text-align: right;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 /*
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}

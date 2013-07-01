@@ -3,30 +3,64 @@
     a {
         text-decoration: none;
         color: $white;
-        padding: 8px 8px;
         display: inline-block;
     }
     h1 {
         float: left;
         text-transform: uppercase;
         margin: 0;
+        a {
+            padding: 11px 8px 10px;
+        }
     }
     #nav {
-        margin-top: 9px;
-        @include media-query(760px) {
-            margin: 0px;
-        }
+        overflow: hidden;
         li {
             float: left;
             a {
+                padding: 20px 10px;
+                text-decoration: none;
+                position: relative;
+                background: $white;
+                color: $red;
+                text-align: center;
+                min-width: 115px;
+                @include media-query(870px) {
+                    min-width: 1px;
+                }
+                @include media-query(767px, 550px) {
+                    font-size: .9em;
+                }
+                @include media-query(549px) {
+                    font-size: .7em;
+                    padding: 10px 8px 16px;
+                    &:before {
+                        line-height: 40px !important;
+                    }
+                }
                 &:before {
                     font-family: $iconFontFamily;
                     font-style: normal;
                     font-weight: normal;
-                    margin-right: 5px;
+                    font-size: 1.8em;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: $red;
+                    color: $white;
+                    text-align: center;
+                    top: 0;
+                    left: 0;
+                    line-height: 60px;
+                    vertical-align: middle;
+                    @include transition(.2s);
                 }
                 &:hover {
-                    text-decoration: underline;
+                    text-decoration: none;
+                    &:before {
+                        top: -100%;
+                        @include transition(.2s);
+                    }
                 }
             }
             &.about a:before {
