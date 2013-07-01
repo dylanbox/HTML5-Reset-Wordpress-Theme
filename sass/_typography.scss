@@ -16,22 +16,27 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 30px;
+    margin: 15px 0;
 }
 
 h2 {
     font-size: 24px;
+    margin: 10px 0;
 }
 
 h3 {
     font-size: 20px;
+    margin: 8px 0;
 }
 
 h4 {
     font-size: 16px;
+    margin: 6px 0;
 }
 
 h5 {
     font-size: 14px;
+    margin: 4px 0;
 }
 
 h6 {
@@ -44,6 +49,14 @@ a {
     color: #03f;
     &:hover {
         color: #69f;
+    }
+}
+
+@mixin ellipsis($oneLine: false) {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    @if $oneLine == true {
+        white-space: nowrap;
     }
 }
 

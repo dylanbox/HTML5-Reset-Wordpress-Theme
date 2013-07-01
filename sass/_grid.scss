@@ -33,49 +33,20 @@
     }
 }
 
-.twelve {
-    width: 100%;
-}
-.eleven {
-    width: percentage(11/12);
-}
-.ten {
-    width: percentage(10/12);
-}
-.nine {
-    width: percentage(9/12);
-}
-.eight {
-    width: percentage(8/12);
-}
-.seven {
-    width: percentage(7/12);
-}
-.six {
-    width: percentage(6/12);
-}
-.five {
-    width: percentage(5/12);
-}
-.four {
-    width: percentage(4/12);
-}
-.three {
-    width: percentage(3/12);
-}
-.two {
-    width: percentage(2/12);
-}
-.one {
-    width: percentage(1/12);
-}
-
-@include media-query() {
-    .eleven, .ten, .nine, .eight, .seven, .six, .five, .four, .three, .two, .one {
-        width: auto;
+@for $i from 1 through $columns {
+    .large-#{$i} {
+        width: percentage($i/$columns);
+        @include media-query() {
+            width: 100%;
+        }
     }
-}
+    .small-#{$i} {
+        @include media-query() {
+            width: percentage($i/$columns) !important;
+        }
+    }
 
+}
 
 .chromeframe {position: absolute; top: 0;}
 

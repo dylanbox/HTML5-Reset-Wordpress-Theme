@@ -1,12 +1,10 @@
 @import "compass/css3";
 @import "_osborn-settings.scss";
 
-@mixin transparent-black {
-    background: rgba(black, .7);
+@mixin transparent-text($backgroundColor: black) {
+    background: rgba($backgroundColor, .7);
     color: $white;
-    margin-top: $columnPadding/2;
-    margin-bottom: $columnPadding/2;
-    padding: $columnPadding/2;
+    padding: 8px;
     a {
         color: $white;
     }
@@ -14,8 +12,10 @@
 
 #homepage .splash-section {
     min-height: 325px;
-    .content {
-        @include transparent-black;
+    .home-text {
+        @include transparent-text;
+        margin-top: 30px;
+        padding-bottom: $columnPadding;
     }
 }
 
@@ -27,25 +27,29 @@
     color: $white;
     text-transform: uppercase;
     font-size: 1.5em;
+    border-bottom: 2px solid $white;
 }
 
 .posts{
+    margin-bottom: 30px;
     .banner {
         background: $blue;
     }
 }
 
 .post {
-    min-height: 150px;
+    min-height: 200px;
     border-bottom: 2px solid $white;
     &:hover {
         .content {
-            @include transition(.2s);
-            @include box-shadow(4px 4px $blue);
-            right: 4px;
-            top: -4px;
+            .title, .meta, .excerpt {
+                background: $blue;
+                @include transition(.2s);
+            }
+            .meta, .excerpt {
+                right: 0;
+            }
         }
-
     }
     .post-link {
         width: 100%;
@@ -56,15 +60,101 @@
         @include transition(.2s);
     }
     .content {
-        @include transparent-black;
+        padding-top: 15px;
+        a {
+            text-decoration: none;
+        }
         .title {
             text-transform: uppercase;
+            @include transparent-text($blue);
+            padding: 8px;
+            @include media-query() {
+                background-color: $blue;
+            }
         }
+        .meta, .excerpt {
+            @include transparent-text($blue);
+            position: relative;
+            right: -100%;
+            @include transition(.2s);
+            @include media-query() {
+                right: 0;
+                background-color: $blue;
+            }
+        }
+        .meta {
+            padding-bottom: 0px;
+        }
+        .excerpt {
+            font-size: .9em;
+            padding-top: 0px;
+        }
+    }
+}
+
+.read-more {
+    text-align: right;
+    &:hover {
+        text-decoration: underline;
     }
 }
 
 .events{
     .banner {
         background: $green;
+    }
+}
+
+.event {
+    padding-left: 0px;
+    margin-bottom: 30px;
+    &:hover {
+        .photo .image-box .date-box {
+            top:0;
+            @include transition(.2s);
+        }
+    }
+    .content {
+        min-height: 150px;
+        .title {
+            margin-bottom: 2px;
+        }
+        .excerpt {
+            font-size: .9em;
+        }
+    }
+    .photo {
+        a {
+            text-decoration: none;
+        }
+        .date-box {
+            background: $green;
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            line-height: 130px;
+            text-align: center;
+            padding: 8px;
+            @include transition(.2s);
+            .date {
+                display: inline-block;
+                color: $white;
+                font-family: $headerFontFamily;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                line-height: 1;
+                vertical-align: middle;
+            }
+        }
+        .image-box {
+            position: relative;
+            .date-box {
+                position: absolute;
+                top:-100%;
+            }
+        }
+    }
+    &:hover {
+
     }
 }
