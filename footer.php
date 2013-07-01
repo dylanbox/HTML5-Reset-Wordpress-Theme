@@ -6,7 +6,12 @@
  */
 ?>
 		<footer id="footer" class="source-org vcard copyright">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
+		    <div class="row">
+    			<h4 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h4>
+                <nav id="footerNav" class="columns right" role="navigation">
+        			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
+        		</nav>
+		    </div>
 		</footer>
 
 	</div>
@@ -23,7 +28,7 @@
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-	 
+
 <script>
 
   var _gaq = _gaq || [];
@@ -38,7 +43,7 @@
 
 </script>
 -->
-	
+
 </body>
 
 </html>

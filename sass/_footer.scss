@@ -1,0 +1,48 @@
+#footer {
+    background: $red;
+    a {
+        text-decoration: none;
+        color: $white;
+        padding: 8px 8px;
+        display: inline-block;
+    }
+    h4 {
+        float: left;
+        text-transform: uppercase;
+        margin: 2px 0 0;
+    }
+    #footerNav {
+        @include media-query(760px) {
+            margin: 0px;
+        }
+        li {
+            float: left;
+            a {
+                &:before {
+                    font-family: $iconFontFamily;
+                    font-style: normal;
+                    font-weight: normal;
+                    margin-right: 5px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.about a:before {
+                content: '\e803';
+            }
+            &.team a:before {
+                content: '\e800';
+            }
+            &.contact a:before {
+                content: '\e80c';
+            }
+            &.resources a:before {
+                content: '\e815';
+            }
+            &.login a:before {
+                content: '\e805';
+            }
+        }
+    }
+}
