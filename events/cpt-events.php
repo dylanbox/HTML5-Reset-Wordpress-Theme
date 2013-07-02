@@ -52,6 +52,7 @@ $args = array(
     '_edit_link' => 'post.php?post=%d', // ?
     'capability_type' => 'post',
     'menu_icon' => get_bloginfo('template_url').'/images/icon-datepicker.png',
+    'menu_position' => 5,
     'hierarchical' => false,
     'rewrite' => array( "slug" => "events" ),
     'supports'=> array('title', 'thumbnail', 'excerpt', 'editor') ,

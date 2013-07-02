@@ -38,17 +38,20 @@
 
         			<?php while (have_posts()) : the_post(); ?>
 
-        				<article <?php post_class() ?>>
+        				<?php echo '<div class="post large-12 columns full-background no-padding" style="background-image:url('.wp_get_attachment_url(get_post_thumbnail_id($post->ID)).');">' ?>
+                            <a href="<?php the_permalink(); ?>" class="post-link"></a>
+                            <div class="content large-7 small-8 columns right">
+                                <a href="<?php the_permalink(); ?>">
+                                    <h4 class="title"><?php the_title(); ?></h4>
+                                </a>
+                                <h6 class="meta"><?php the_date( 'M, j, Y', 'on ' ); ?></h6>
+                                <div class="excerpt">
+                                    <p><?php echo excerpt(25); ?></p>
+                                    <a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
+                                </div>
 
-        						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-
-        						<?php posted_on(); ?>
-
-        						<div class="entry">
-        							<?php the_content(); ?>
-        						</div>
-
-        				</article>
+                            </div>
+                        </div>
 
         			<?php endwhile; ?>
 

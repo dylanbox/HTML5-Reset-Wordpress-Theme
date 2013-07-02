@@ -113,20 +113,19 @@
 	// Custom Menu
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
 
-	// Widgets
-	if ( !function_exists('register_sidebar' )) {
-		function html5reset_widgets_init() {
-			register_sidebar( array(
-				'name'          => __( 'Sidebar Widgets', 'html5reset' ),
-				'id'            => 'sidebar-primary',
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			) );
-		}
-		add_action( 'widgets_init', 'html5reset_widgets_init' );
-	}
+    //Register our sidebars and widgetized areas.
+    function html5reset_widgets_init() {
+
+    	register_sidebar( array(
+    		'name' => 'Sidebar Widgets',
+    		'id' => 'sidebar-primary',
+    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    		'after_widget' => '</aside>',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    	) );
+    }
+    add_action( 'widgets_init', 'html5reset_widgets_init' );
 
 	// Navigation - update coming from twentythirteen
 	function post_navigation() {
