@@ -5,9 +5,14 @@
     }
 }
 
+#postArchive {
+    min-height: 300px;
+}
+
 .post {
     min-height: 200px;
     border-bottom: 2px solid $white;
+    overflow: hidden;
     &:hover {
         .content {
             .title, .meta, .excerpt {
@@ -57,5 +62,8 @@
             font-size: .9em;
             padding-top: 0px;
         }
+    }
+    .post-thumbnail {
+        min-height: 200px;
     }
 }

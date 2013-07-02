@@ -4,6 +4,18 @@
     }
 }
 
+.ss-form-title {
+    margin: 0;
+    text-align: center;
+    font-family: $headerFontFamily;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-bottom: 2px solid $white;
+    background: $green;
+}
+
 .event {
     padding-left: 0px;
     margin-bottom: 30px;

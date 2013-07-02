@@ -67,8 +67,12 @@ a {
     font-family: $headerFontFamily;
     color: $white;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 1.5em;
     border-bottom: 2px solid $white;
+    &:hover {
+        color: $white;
+    }
 }
 
 .read-more {

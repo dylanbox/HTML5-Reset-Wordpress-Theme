@@ -11,9 +11,7 @@
 
     		<article class="post large-12 columns" id="post-<?php the_ID(); ?>">
 
-    			<h2><?php the_title(); ?></h2>
-
-    			<?php posted_on(); ?>
+    			<h1><?php the_title(); ?></h1>
 
     			<div class="entry">
 

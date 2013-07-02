@@ -6,12 +6,13 @@ wp_enqueue_style( 'home', get_template_directory_uri() . '/home.css');
 
 get_header(); ?>
     <div id="homepage">
-        <div class="splash-section full-background" style="background-image:url('http://placehold.it/1500x300');">
+        <?php echo '<div class="splash-section full-background" style="background-image:url('. get_post_meta(get_the_ID(), 'background-image', true) .');">'?>
             <div class="row">
                 <div class="home-text large-6 columns right">
                     <div class="content">
-                        <h1>We're building a community around change.</h1>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <?php the_content(); ?>
+                    	<?php endwhile; endif; ?>
                     </div>
                 </div>
             </div>
@@ -19,8 +20,10 @@ get_header(); ?>
         <div class="row">
             <div class="posts large-7 columns">
                 <div class="row">
-                    <div class="large-12 columns banner">Recent Posts</div>
-                    <?php if (have_posts()) : while (have_posts()) : the_post();?>
+                    <a href="/posts" class="large-12 columns banner">Recent Posts</a>
+                    <?php
+                     $post_loop = new WP_Query(array('post_type' => 'post')); ?>
+                    <?php while ( $post_loop->have_posts() ) : $post_loop->the_post(); ?>
                         <?php echo '<div class="post large-12 columns full-background no-padding" style="background-image:url('.wp_get_attachment_url(get_post_thumbnail_id($post->ID)).');">' ?>
                             <a href="<?php the_permalink(); ?>" class="post-link"></a>
                             <div class="content large-7 small-8 columns right">
@@ -35,13 +38,12 @@ get_header(); ?>
 
                             </div>
                         </div>
-                    <?php endwhile; endif; ?>
+                    <?php endwhile;?>
                 </div>
             </div>
             <div class="events large-5 columns">
                 <div class="row">
-                    <div class="large-12 columns banner">Upcoming Events</div>
-
+                    <a href="/events" class="large-12 columns banner">Upcoming Events</a>
                     <?php
                     $args = array(
                        'post_type' => 'tf_events',

@@ -45,7 +45,18 @@
             width: percentage($i/$columns) !important;
         }
     }
-
+    .left-#{$i} {
+        left: percentage($i/$columns);
+        @include media-query() {
+            left:0;
+        }
+    }
+    .right-#{$i} {
+        right: percentage($i/$columns);
+        @include media-query() {
+            right: 0;
+        }
+    }
 }
 
 .chromeframe {position: absolute; top: 0;}
