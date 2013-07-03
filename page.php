@@ -9,7 +9,9 @@
 
     	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    		<article class="post large-12 columns" id="post-<?php the_ID(); ?>">
+    		<article class="page large-12 columns" id="post-<?php the_ID(); ?>">
+    		    <?php echo '<div class="page-thumbnail large-12 columns full-background no-padding" style="background-image:url('.wp_get_attachment_url(get_post_thumbnail_id($post->ID)).');">' ?>
+                    </div>
 
     			<h1><?php the_title(); ?></h1>
 

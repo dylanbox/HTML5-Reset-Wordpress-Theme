@@ -1643,6 +1643,18 @@ html, body {
   }
 }
 
+/* line 1, sass/_pages.scss */
+.page-thumbnail {
+  min-height: 400px;
+  background-position-y: 20%;
+}
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+  /* line 1, sass/_pages.scss */
+  .page-thumbnail {
+    min-height: 200px;
+  }
+}
+
 /* line 1, sass/_comments.scss */
 ol.commentlist {
   list-style: none;

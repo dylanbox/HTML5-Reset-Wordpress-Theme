@@ -1,0 +1,7 @@
+.page-thumbnail {
+    min-height: 400px;
+    background-position-y: 20%;
+    @include media-query() {
+        min-height: 200px;
+    }
+}
