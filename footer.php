@@ -6,6 +6,7 @@
  */
 ?>
 
+        </div>
         <div id="stickyFooter"></div>
     </div>
 	<footer id="footer" class="source-org vcard copyright">

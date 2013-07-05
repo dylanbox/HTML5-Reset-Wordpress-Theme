@@ -13,6 +13,7 @@ $green: #44B97B;
 $orange: #DD905C;
 $purple: #855FA8;
 $grey: #626366;
+$black: #000000;
 
 /* Media Query Inline  use @include media-query($size) {  }  */
 @mixin media-query($maxSize:767px, $minSize:0px) {
@@ -26,4 +27,46 @@ $grey: #626366;
     a {
         color: $white;
     }
+}
+
+@mixin triangle($direction, $color, $width, $height) {
+    @if $direction == "left" {
+            border-bottom: $height/2 solid transparent;
+            border-right: $width solid $color;
+            border-top: $height/2 solid transparent;
+    }
+    @else if $direction == "right" {
+            border-bottom: $height/2 solid transparent;
+            border-left: $width solid $color;
+            border-top: $height/2 solid transparent;
+    }
+    @else if $direction == "up" {
+            border-bottom: $height solid $color;
+            border-left: $width/2 solid transparent;
+            border-right: $width/2 solid transparent;
+    }
+    @else if $direction == "down" {
+            border-right: $width/2 solid transparent;
+            border-left: $height/2 solid transparent;
+            border-top: $height solid $color;
+    }
+    @if $direction == "left-top" {
+            border-bottom: $height solid transparent;
+            border-left: $width solid $color;
+    }
+    @else if $direction == "right-top" {
+            border-bottom: $height solid transparent;
+            border-right: $width solid $color;
+    }
+    @else if $direction == "left-bottom" {
+            border-top: $height solid transparent;
+            border-left: $width solid $color;
+    }
+    @else if $direction == "right-bottom" {
+            border-top: $height solid transparent;
+            border-right: $width solid $color;
+    }
+
+    height: 0;
+    width: 0;
 }

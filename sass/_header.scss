@@ -1,5 +1,4 @@
 #header {
-    background: $red;
     a {
         text-decoration: none;
         color: $white;
@@ -12,6 +11,9 @@
         a {
             padding: 11px 8px 10px;
         }
+    }
+    .header-content {
+        background: $red;
     }
     #nav {
         overflow: hidden;
@@ -78,6 +80,21 @@
             &.login a:before {
                 content: '\e805';
             }
+        }
+    }
+    .shadow {
+        .left-shadow {
+            @include triangle('right-top', darken($grey, 15%), 20px, 15px);
+            float: left;
+        }
+        .right-shadow {
+            @include triangle('left-top', darken($grey, 15%), 20px, 15px);
+            float: right;
+        }
+        .shadow {
+            background: darken($grey, 15%);
+            height: 10px;
+            margin: 0 20px;
         }
     }
 }

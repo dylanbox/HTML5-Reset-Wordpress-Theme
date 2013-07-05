@@ -8,12 +8,25 @@
     @include media-query(1000px) {
         width: auto;
     }
+    .row {
+        margin: 0 $columnPadding/-2;
+    }
     &:before, &:after {
         content: " ";
         display: table;
     }
     &:after {
         clear: both;
+    }
+}
+
+#pageContent {
+    width: $rowWidth - 40;
+    margin: -5px auto 0;
+    @include box-shadow(0 0 10px lighten($grey, 15%));
+    @include media-query(1000px) {
+        margin: -5px 20px 0;
+        width: auto;
     }
 }
 

@@ -115,10 +115,16 @@
 
 	<div id="pageWrapper">
 		<header id="header" role="header">
-		    <div class="row">
+		    <div class="row header-content">
     			<h1 class="columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 <nav id="nav" class="columns right" role="navigation">
         			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
         		</nav>
 		    </div>
+		    <div class="row shadow">
+		        <div class="left-shadow"></div>
+		        <div class="right-shadow"></div>
+		        <div class="shadow"></div>
+		    </div>
 		</header>
+		<div id="pageContent">
