@@ -11,3 +11,4 @@ Osborn Voice  is a Wordpress theme built for the Osborn Neighborhod Alliance's c
 **With help from frameworks, libraries and other cool things:**
 xs
 [HTML5 Reset Template](https://github.com/murtaugh/HTML5-Reset).
+[jQuery Masonry](https://github.com/desandro/masonry).
