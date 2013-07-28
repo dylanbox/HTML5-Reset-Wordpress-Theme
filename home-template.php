@@ -72,7 +72,7 @@ get_header(); ?>
                     	    <div class="row">
                                 <div class="large-5 small-3 columns photo no-padding">
                                      <a href="<?php the_permalink(); ?> ">
-                                         <?php if (has_post_thumbnail()) { ?>
+                                         <?php if (has_post_thumbnail(array(150))) { ?>
                                                     <div class="image-box">
                                                         <?php the_post_thumbnail('thumbnail');
                                                             echo '<div class="date-box"><div class="date">'.$large_start.'</div></div>';?>

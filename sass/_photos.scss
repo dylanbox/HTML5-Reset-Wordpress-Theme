@@ -1,0 +1,50 @@
+#photoArchive{
+    .banner {
+        background: $purple;
+        @include ellipsis;
+    }
+}
+
+.photo {
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    &:hover {
+        .image-box .title-box {
+            top:0;
+            @include transition(.2s);
+        }
+    }
+    .title-box {
+        background: $purple;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 8px;
+        @include transition(.2s);
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em; /* Adjusts for spacing */
+        }
+        .title {
+            color: $white;
+            font-family: $bodyFontFamily;
+            font-size: 1em;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+    .image-box {
+        position: relative;
+        .title-box {
+            position: absolute;
+            top:-100%;
+        }
+    }
+}

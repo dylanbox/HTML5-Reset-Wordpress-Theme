@@ -161,5 +161,6 @@
     }
 
     include 'events/cpt-events.php';
+    include 'photos/photos.php';
 
 ?>
