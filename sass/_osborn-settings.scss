@@ -15,6 +15,9 @@ $purple: #855FA8;
 $grey: #626366;
 $black: #000000;
 
+$buttonRadius: 4px;
+$sectionBorder: 1px solid lighten($grey, 20%);
+
 /* Media Query Inline  use @include media-query($size) {  }  */
 @mixin media-query($maxSize:767px, $minSize:0px) {
     @media only screen and (max-width: $maxSize) and (min-width: $minSize) { @content; }

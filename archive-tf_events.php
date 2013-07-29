@@ -36,11 +36,11 @@ get_header();
 
                 	<div class="large-12 columns event">
                 	    <div class="row">
-                            <div class="large-5 small-3 columns photo no-padding">
+                            <div class="event-photo">
                                  <a href="<?php the_permalink(); ?> ">
-                                     <?php if (has_post_thumbnail(array(150))) { ?>
+                                     <?php if (has_post_thumbnail()) { ?>
                                                 <div class="image-box">
-                                                    <?php the_post_thumbnail('thumbnail');
+                                                    <?php the_post_thumbnail(array(150));
                                                         echo '<div class="date-box"><div class="date">'.$large_start.'</div></div>';?>
                                                 </div>
                                      <?php  }
@@ -50,7 +50,7 @@ get_header();
                                         ?>
                                  </a>
                             </div>
-                            <div class="content large-7 small-9 columns">
+                            <div class="content">
                                 <a href="<?php the_permalink(); ?> ">
                                     <h4 class="title"><?php the_title(); ?></h4>
                                 </a>
@@ -90,7 +90,7 @@ get_header();
 
                 	<div class="large-12 columns event">
                 	    <div class="row">
-                            <div class="large-5 small-3 columns photo no-padding">
+                            <div class="event-photo">
                                  <a href="<?php the_permalink(); ?> ">
                                      <?php if (has_post_thumbnail()) { ?>
                                                 <div class="image-box">
@@ -104,7 +104,7 @@ get_header();
                                         ?>
                                  </a>
                             </div>
-                            <div class="content large-7 small-9 columns">
+                            <div class="content">
                                 <a href="<?php the_permalink(); ?> ">
                                     <h4 class="title"><?php the_title(); ?></h4>
                                 </a>
@@ -118,6 +118,9 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             </div>
+        </div>
+        <div class="large-3 columns" id="sidebar">
+            <?php dynamic_sidebar('sidebar-events'); ?>
         </div>
     </div>
 </div>

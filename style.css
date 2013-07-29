@@ -264,6 +264,69 @@ button {
 }
 
 /* Media Query Inline  use @include media-query($size) {  }  */
+/* line 2, sass/_elements.scss */
+#searchform label {
+  font-size: 20px;
+  margin: 8px 0;
+  font-weight: 400;
+  font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: block;
+}
+/* line 9, sass/_elements.scss */
+#searchform input#s {
+  border: 1px solid #959699;
+  border-right: none;
+  background: white;
+  display: inline-block;
+  width: 125px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 18, sass/_elements.scss */
+#searchform input#searchsubmit {
+  background: #626366;
+  color: white;
+  margin-top: -3px;
+  margin-left: -4px;
+  font-size: .8em;
+  border: none;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: inline-block;
+  -webkit-box-shadow: 0 2px #494a4c;
+  -moz-box-shadow: 0 2px #494a4c;
+  box-shadow: 0 2px #494a4c;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 31, sass/_elements.scss */
+#searchform input#searchsubmit:hover {
+  background: #494a4c;
+}
+
 /* line 1, sass/_grid.scss */
 * {
   -moz-box-sizing: border-box;
@@ -1504,14 +1567,19 @@ html, body {
 #postArchive {
   min-height: 300px;
 }
+/* line 10, sass/_posts.scss */
+#postArchive .banner {
+  background: #508ac8;
+  margin: 0;
+}
 
-/* line 12, sass/_posts.scss */
+/* line 16, sass/_posts.scss */
 .post {
   min-height: 200px;
   border-bottom: 2px solid white;
   overflow: hidden;
 }
-/* line 18, sass/_posts.scss */
+/* line 22, sass/_posts.scss */
 .post:hover .content .title, .post:hover .content .meta, .post:hover .content .excerpt {
   background: #508ac8;
   -webkit-transition: 0.2s;
@@ -1519,11 +1587,11 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 22, sass/_posts.scss */
+/* line 26, sass/_posts.scss */
 .post:hover .content .meta, .post:hover .content .excerpt {
   right: 0;
 }
-/* line 27, sass/_posts.scss */
+/* line 31, sass/_posts.scss */
 .post .post-link {
   width: 100%;
   background: transparent;
@@ -1535,15 +1603,15 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 35, sass/_posts.scss */
+/* line 39, sass/_posts.scss */
 .post .content {
   padding-top: 15px;
 }
-/* line 37, sass/_posts.scss */
+/* line 41, sass/_posts.scss */
 .post .content a {
   text-decoration: none;
 }
-/* line 40, sass/_posts.scss */
+/* line 44, sass/_posts.scss */
 .post .content .title {
   text-transform: uppercase;
   background: rgba(80, 138, 200, 0.7);
@@ -1551,17 +1619,17 @@ html, body {
   padding: 8px;
   padding: 8px;
 }
-/* line 27, sass/_osborn-settings.scss */
+/* line 30, sass/_osborn-settings.scss */
 .post .content .title a {
   color: white;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 40, sass/_posts.scss */
+  /* line 44, sass/_posts.scss */
   .post .content .title {
     background-color: #508ac8;
   }
 }
-/* line 48, sass/_posts.scss */
+/* line 52, sass/_posts.scss */
 .post .content .meta, .post .content .excerpt {
   background: rgba(80, 138, 200, 0.7);
   color: white;
@@ -1573,27 +1641,27 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 27, sass/_osborn-settings.scss */
+/* line 30, sass/_osborn-settings.scss */
 .post .content .meta a, .post .content .excerpt a {
   color: white;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 48, sass/_posts.scss */
+  /* line 52, sass/_posts.scss */
   .post .content .meta, .post .content .excerpt {
     right: 0;
     background-color: #508ac8;
   }
 }
-/* line 58, sass/_posts.scss */
+/* line 62, sass/_posts.scss */
 .post .content .meta {
   padding-bottom: 0px;
 }
-/* line 61, sass/_posts.scss */
+/* line 65, sass/_posts.scss */
 .post .content .excerpt {
   font-size: .9em;
   padding-top: 0px;
 }
-/* line 66, sass/_posts.scss */
+/* line 70, sass/_posts.scss */
 .post .post-thumbnail {
   min-height: 200px;
 }
@@ -1618,10 +1686,10 @@ html, body {
 
 /* line 19, sass/_events.scss */
 .event {
-  margin-bottom: 30px;
+  margin-bottom: 2px;
 }
 /* line 22, sass/_events.scss */
-.event:hover .photo .image-box .date-box {
+.event:hover .event-photo .image-box .date-box {
   top: 0;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -1630,22 +1698,30 @@ html, body {
 }
 /* line 27, sass/_events.scss */
 .event .content {
+  overflow: hidden;
+  width: auto;
   min-height: 150px;
 }
-/* line 29, sass/_events.scss */
+/* line 31, sass/_events.scss */
 .event .content .title {
   margin-bottom: 2px;
 }
-/* line 32, sass/_events.scss */
+/* line 34, sass/_events.scss */
 .event .content .excerpt {
   font-size: .9em;
 }
-/* line 37, sass/_events.scss */
-.event .photo a {
+/* line 38, sass/_events.scss */
+.event .event-photo {
+  float: left;
+  width: 150px;
+  margin-right: 8px;
+}
+/* line 42, sass/_events.scss */
+.event .event-photo a {
   text-decoration: none;
 }
-/* line 40, sass/_events.scss */
-.event .photo .date-box {
+/* line 45, sass/_events.scss */
+.event .event-photo .date-box {
   background: #44b97b;
   width: 100%;
   max-width: 150px;
@@ -1658,8 +1734,8 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 49, sass/_events.scss */
-.event .photo .date-box .date {
+/* line 54, sass/_events.scss */
+.event .event-photo .date-box .date {
   display: inline-block;
   color: white;
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -1668,18 +1744,20 @@ html, body {
   line-height: 1;
   vertical-align: middle;
 }
-/* line 59, sass/_events.scss */
-.event .photo .image-box {
+/* line 64, sass/_events.scss */
+.event .event-photo .image-box {
   position: relative;
+  text-align: left;
+  height: 150px;
 }
-/* line 61, sass/_events.scss */
-.event .photo .image-box .date-box {
+/* line 68, sass/_events.scss */
+.event .event-photo .image-box .date-box {
   position: absolute;
   top: -100%;
 }
 @media only screen and (max-width: 550px) and (min-width: 0px) {
-  /* line 61, sass/_events.scss */
-  .event .photo .image-box .date-box {
+  /* line 68, sass/_events.scss */
+  .event .event-photo .image-box .date-box {
     display: none;
   }
 }

@@ -7,6 +7,10 @@
 
 #postArchive {
     min-height: 300px;
+    .banner {
+        background: $blue;
+        margin: 0;
+    }
 }
 
 .post {

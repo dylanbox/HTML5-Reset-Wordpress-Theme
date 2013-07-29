@@ -1,0 +1,35 @@
+#searchform {
+    label {
+        font-size: 20px;
+        margin: 8px 0;
+        font-weight: 400;
+        font-family: $headerFontFamily;
+        display: block;
+    }
+    input#s {
+        border: $sectionBorder;
+        border-right: none;
+        background: $white;
+        display: inline-block;
+        width: 125px;
+        @include border-left-radius($buttonRadius);
+        @include border-right-radius(0);
+    }
+    input#searchsubmit {
+        background: $grey;
+        color: $white;
+        margin-top: -3px;
+        margin-left: -4px;
+        font-size: .8em;
+        border: none;
+        font-family: $bodyFontFamily;
+        display: inline-block;
+        @include box-shadow(0 2px darken($grey, 10%));
+        @include border-left-radius(0);
+        @include border-right-radius($buttonRadius);
+        @include transition(.2s);
+        &:hover {
+            background: darken($grey, 10%);
+        }
+    }
+}

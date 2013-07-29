@@ -17,14 +17,16 @@
 }
 
 .event {
-    margin-bottom: 30px;
+    margin-bottom: 2px;
     &:hover {
-        .photo .image-box .date-box {
+        .event-photo .image-box .date-box {
             top:0;
             @include transition(.2s);
         }
     }
     .content {
+        overflow: hidden;
+        width: auto;
         min-height: 150px;
         .title {
             margin-bottom: 2px;
@@ -33,7 +35,10 @@
             font-size: .9em;
         }
     }
-    .photo {
+    .event-photo {
+        float: left;
+        width: 150px;
+        margin-right: $columnPadding/2;
         a {
             text-decoration: none;
         }
@@ -58,6 +63,8 @@
         }
         .image-box {
             position: relative;
+            text-align: left;
+            height: 150px;
             .date-box {
                 position: absolute;
                 top:-100%;
