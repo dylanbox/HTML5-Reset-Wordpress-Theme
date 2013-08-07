@@ -1896,18 +1896,22 @@ html, body {
 
 /* line 2, sass/_photos.scss */
 #photoArchive .banner {
-  background: #845fa7;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 8, sass/_photos.scss */
+/* line 7, sass/_photos.scss */
+.top-banner {
+  margin-bottom: 8px;
+}
+
+/* line 11, sass/_photos.scss */
 .photo {
   margin-bottom: 30px;
   text-align: center;
   overflow: hidden;
 }
-/* line 13, sass/_photos.scss */
+/* line 16, sass/_photos.scss */
 .photo:hover .image-box .title-box {
   top: 0;
   -webkit-transition: 0.2s;
@@ -1915,9 +1919,9 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 18, sass/_photos.scss */
+/* line 21, sass/_photos.scss */
 .photo .title-box {
-  background: #845fa7;
+  background: #ffdd57;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1927,7 +1931,7 @@ html, body {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 25, sass/_photos.scss */
+/* line 28, sass/_photos.scss */
 .photo .title-box:before {
   content: '';
   display: inline-block;
@@ -1936,9 +1940,9 @@ html, body {
   margin-right: -0.25em;
   /* Adjusts for spacing */
 }
-/* line 32, sass/_photos.scss */
+/* line 35, sass/_photos.scss */
 .photo .title-box .title {
-  color: white;
+  color: #1a1a1a;
   font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
   line-height: 1;
@@ -1947,11 +1951,11 @@ html, body {
   width: 100%;
   padding: 15px;
 }
-/* line 43, sass/_photos.scss */
+/* line 46, sass/_photos.scss */
 .photo .image-box {
   position: relative;
 }
-/* line 45, sass/_photos.scss */
+/* line 48, sass/_photos.scss */
 .photo .image-box .title-box {
   position: absolute;
   top: -100%;

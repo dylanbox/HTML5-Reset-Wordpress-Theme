@@ -1,8 +1,11 @@
 #photoArchive{
     .banner {
-        background: $purple;
         @include ellipsis;
     }
+}
+
+.top-banner {
+    margin-bottom: $columnPadding/2;
 }
 
 .photo {
@@ -16,7 +19,7 @@
         }
     }
     .title-box {
-        background: $purple;
+        background: $yellow;
         width: 100%;
         height: 100%;
         text-align: center;
@@ -30,7 +33,7 @@
             margin-right: -0.25em; /* Adjusts for spacing */
         }
         .title {
-            color: $white;
+            color: lighten($black, 10%);
             font-family: $bodyFontFamily;
             font-size: 1em;
             line-height: 1;

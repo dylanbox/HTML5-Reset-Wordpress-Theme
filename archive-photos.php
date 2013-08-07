@@ -14,7 +14,7 @@
 </script>
 <div id="photoArchive">
     <div class="row">
-        <div class="large-12 columns banner">Photos</div>
+        <div class="large-12 columns banner top-banner">Photos</div>
     </div>
     <div id="photos" class="row">
         <?php $args = array( 'post_type' => 'photos', 'posts_per_page' => 10 );
