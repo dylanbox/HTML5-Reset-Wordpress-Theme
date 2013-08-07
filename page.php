@@ -5,29 +5,24 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
-    <div class="row">
-
-    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    		<article class="page large-12 columns" id="post-<?php the_ID(); ?>">
-    		    <?php echo '<div class="page-thumbnail large-12 columns full-background no-padding" style="background-image:url('.wp_get_attachment_url(get_post_thumbnail_id($post->ID)).');">' ?>
+<div id="page">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php if (has_post_thumbnail()) : ?>
+            <?php echo '<div class="splash-section full-background" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?></div>
+        <?php endif; ?>
+            <div id="mainContent" class="row">
+                <div class="page large-12 columns">
+                    <div class="content">
+                        <h1><?php the_title(); ?></h1>
+                        <div class="text">
+                            <p><?php the_content(); ?></p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-    			<h1><?php the_title(); ?></h1>
+    <?php endwhile; endif; ?>
+</div>
 
-    			<div class="entry">
-
-    				<?php the_content(); ?>
-
-    				<?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
-
-    			</div>
-
-    			<?php edit_post_link(__('Edit this entry.'), '<p>', '</p>'); ?>
-
-    		</article>
-
-		<?php endwhile; endif; ?>
-
-    </div>
 <?php get_footer(); ?>

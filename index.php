@@ -1,41 +1,59 @@
 <?php
 /**
- * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
- */
- get_header(); ?>
+* @package WordPress
+* @subpackage HTML5-Reset-WordPress-Theme
+* @since HTML5 Reset 2.0
+*/
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+get_header(); ?>
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<!-- This is Index.php -->
+<div id="mainContent" class="row">
+    <div class="large-8 small-12 columns">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
 
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                <div class="post">
+                    <a href="<?php the_permalink(); ?>" class="image-box">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php echo '<div href="" class="full-background image" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?></div>
+                        <?php endif; ?>
+                    </a>
+                    <div class="content">
+                        <a href="<?php the_permalink(); ?>" class="title">
+                            <h2><?php the_title(); ?></h2>
+                        </a>
+                        <div class="info">
+                            <div class="category">
+                                <?php
+                                $category = get_the_category();
+                                if($category[0]){
+                                echo '<a href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
+                                }
+                                ?>
+                            </div>
+                            <div class="meta">
+                                <div class="author">By <?php the_author(); ?></div>
+                                <div class="meta"><?php the_date( 'M, j, Y', 'on ' ); ?></div>
+                            </div>
+                        </div>
+                        <div class="excerpt">
+                            <p class="content"><?php echo excerpt(55); ?></p>
+                            <a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
+                        </div>
+                    </div>
+                </div>
 
-			<?php posted_on(); ?>
-
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
-
-			<footer class="postmetadata">
-				<?php the_tags(__('Tags: ','html5reset'), ', ', '<br />'); ?>
-				<?php _e('Posted in','html5reset'); ?> <?php the_category(', ') ?> | 
-				<?php comments_popup_link(__('No Comments &#187;','html5reset'), __('1 Comment &#187;','html5reset'), __('% Comments &#187;','html5reset')); ?>
-			</footer>
-
-		</article>
-
-	<?php endwhile; ?>
-
-	<?php post_navigation(); ?>
-
-	<?php else : ?>
-
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
-
-	<?php endif; ?>
-
-<?php get_sidebar(); ?>
-
+            <?php endwhile; ?>
+            <!-- code here for after loop -->
+            <?php post_navigation(); ?>
+        <?php else : ?>
+            <!-- code here for no posts found -->
+            <h2><?php _e('Nothing Found','html5reset'); ?></h2>
+        <?php endif; ?>
+    </div>
+    <div id="sideColumn" class="large-4 columns hide-for-small">
+        <?php get_sidebar(); ?>
+    </div>
+</div>
 <?php get_footer(); ?>

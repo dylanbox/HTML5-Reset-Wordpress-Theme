@@ -1,7 +1,29 @@
-.page-thumbnail {
-    min-height: 400px;
-    background-position-y: 20%;
-    @include media-query() {
-        min-height: 200px;
+#page {
+    .splash-section {
+        min-height: 400px;
+        margin-bottom: -100px;
+        @include media-query() {
+            min-height: 150px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#page #mainContent {
+    border-top: 4px solid $blue;
+    .title {
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+        color: lighten($black, 10%);
+        @include transition(.2s);
+        h1 {
+            @include media-query() {
+                font-size: 1.2em;
+            }
+        }
+    }
+    .content {
+        min-height: 300px;
     }
 }

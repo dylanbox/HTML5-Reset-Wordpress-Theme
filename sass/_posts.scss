@@ -8,63 +8,158 @@
 #postArchive {
     min-height: 300px;
     .banner {
-        background: $blue;
         margin: 0;
     }
 }
 
-.post {
-    min-height: 200px;
-    border-bottom: 2px solid $white;
-    overflow: hidden;
-    &:hover {
-        .content {
-            .title, .meta, .excerpt {
-                background: $blue;
-                @include transition(.2s);
+.home {
+    .splash-section {
+        position: relative;
+        > .row {
+            padding-top: 300px;
+            @include media-query() {
+                padding-top: 160px;
             }
-            .meta, .excerpt {
-                right: 0;
+        }
+        .post {
+            border-top: none;
+            margin: 0;
+            @include media-query() {
+                position: relative;
+                bottom: auto;
+            }
+            .content {
+                .title {
+                    h1 {
+                        background: $purple;
+                        padding: $columnPadding;
+                        color: $white;
+                        margin: 0 -1*$columnPadding;
+                        @include media-query() {
+                            font-size: 1em;
+                            padding: $columnPadding/2;
+                        }
+                    }
+                    &:hover h1 {
+                        background: darken($purple, 10%);
+                    }
+                }
             }
         }
     }
-    .post-link {
-        width: 100%;
-        background: transparent;
-        position: absolute;
-        height: 100%;
-        left: 0;
-        @include transition(.2s);
+}
+
+
+.single {
+    .splash-section {
+        min-height: 400px;
+        margin-bottom: -100px;
+        @include media-query() {
+            min-height: 150px;
+            margin-bottom: 0;
+        }
+    }
+    #mainContent {
+        border-top: 4px solid $blue;
+        .title {
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+            color: lighten($black, 10%);
+            @include transition(.2s);
+            h1 {
+                @include media-query() {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .content {
+            min-height: 300px;
+        }
+    }
+}
+
+.home, .single  {
+    .no-thumbnail {
+        .post, #mainContent {
+            border-top: none;
+        }
+    }
+}
+
+.post {
+    overflow: hidden;
+    background: $white;
+    padding: 0 $columnPadding $columnPadding;
+    margin: 0 $columnPadding/-2;
+    border-top: 4px solid $purple;
+    .image-box {
+        margin: 0 -1*$columnPadding;
+        display: block;
+        .image {
+            height: 300px;
+            display: block;
+            @include media-query() {
+                height: 150px;
+            }
+        }
     }
     .content {
-        padding-top: 15px;
         a {
             text-decoration: none;
         }
         .title {
             text-transform: uppercase;
-            @include transparent-text($blue);
-            padding: 8px;
-            @include media-query() {
-                background-color: $blue;
+            font-weight: 600;
+            display: block;
+            color: lighten($black, 10%);
+            @include transition(.2s);
+            h1 {
+                @include media-query() {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .info {
+            margin: $columnPadding/2 0;
+            .category {
+                background: $purple;
+                font-weight: 600;
+                font-size: .9em;
+                text-transform: uppercase;
+                padding: 5px;
+                letter-spacing: 1px;
+                float: left;
+                @include transition(.2s);
+                @include media-query() {
+                    font-size: .7em;
+                }
+                a {
+                    color: $white;
+                }
+                &:hover {
+                    background: darken($purple, 10%);
+                }
+            }
+            .meta {
+                width: auto;
+                overflow: auto;
+                text-align: right;
+                font-size: .9em;
+                @include media-query() {
+                    font-size: .8em;
+                }
             }
         }
         .meta, .excerpt {
-            @include transparent-text($blue);
             position: relative;
-            right: -100%;
-            @include transition(.2s);
-            @include media-query() {
-                right: 0;
-                background-color: $blue;
-            }
-        }
-        .meta {
-            padding-bottom: 0px;
         }
         .excerpt {
             font-size: .9em;
             padding-top: 0px;
+        }
+        .read-more {
+            float: right;
         }
     }
     .post-thumbnail {

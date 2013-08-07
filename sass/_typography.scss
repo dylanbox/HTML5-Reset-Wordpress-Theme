@@ -65,13 +65,16 @@ a {
     padding-bottom: 5px;
     text-align: center;
     font-family: $headerFontFamily;
-    color: $white;
+    font-weight: 600;
+    color: lighten($black, 10%);
+    background: darken($white, 10%);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5em;
-    border-bottom: 2px solid $white;
+    @include transition(.2s);
     &:hover {
-        color: $white;
+        background: darken($white, 20%);
+        color: lighten($black, 10%);
     }
 }
 

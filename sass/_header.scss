@@ -1,19 +1,21 @@
 #header {
+    background: $blue;
+    border-bottom: 2px solid $white;
     a {
         text-decoration: none;
         color: $white;
         display: inline-block;
     }
-    h1 {
+    .logo {
         float: left;
-        text-transform: uppercase;
         margin: 0;
+        font-family:    $headerFontFamily;
+        font-weight:    400;
+        font-size:      30px;
+        text-transform: uppercase;
         a {
             padding: 11px 8px 10px;
         }
-    }
-    .header-content {
-        background: $red;
     }
     #nav {
         overflow: hidden;
@@ -24,7 +26,7 @@
                 text-decoration: none;
                 position: relative;
                 background: $white;
-                color: $red;
+                color: $blue;
                 text-align: center;
                 min-width: 115px;
                 @include media-query(870px) {
@@ -48,7 +50,7 @@
                     position: absolute;
                     height: 100%;
                     width: 100%;
-                    background: $red;
+                    background: $blue;
                     color: $white;
                     text-align: center;
                     top: 0;
@@ -80,21 +82,6 @@
             &.login a:before {
                 content: '\e805';
             }
-        }
-    }
-    .shadow {
-        .left-shadow {
-            @include triangle('right-top', darken($grey, 15%), 20px, 15px);
-            float: left;
-        }
-        .right-shadow {
-            @include triangle('left-top', darken($grey, 15%), 20px, 15px);
-            float: right;
-        }
-        .shadow {
-            background: darken($grey, 15%);
-            height: 10px;
-            margin: 0 20px;
         }
     }
 }

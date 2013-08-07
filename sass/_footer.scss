@@ -2,7 +2,10 @@
 @include sticky-footer(37px, "#pageWrapper", "#stickyFooter", "#footer");
 
 #footer {
-    background: $red;
+    background: $blue;
+    @include media-query() {
+        height: auto;
+    }
     a {
         text-decoration: none;
         color: $white;
