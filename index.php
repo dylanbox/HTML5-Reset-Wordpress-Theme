@@ -9,7 +9,7 @@ get_header(); ?>
 
 <!-- This is Index.php -->
 <div id="mainContent" class="row">
-    <div class="large-8 small-12 columns">
+    <div id="posts" class="large-8 small-12 columns">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
 

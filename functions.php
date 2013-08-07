@@ -45,6 +45,7 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'html5reset_scripts_styles' );
 
+
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 	function html5reset_wp_title( $title, $sep ) {
 		global $paged, $page;
@@ -171,5 +172,6 @@
 
     include 'events/cpt-events.php';
     include 'photos/photos.php';
+    include 'infinite-scroll.php';
 
 ?>

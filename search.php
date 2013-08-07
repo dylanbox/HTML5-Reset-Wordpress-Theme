@@ -6,7 +6,7 @@
  */
  get_header(); ?>
 <div id="mainContent" class="row">
-    <div class="large-8 small-12 columns">
+    <div class="posts large-8 small-12 columns">
 	<?php if (have_posts()) : ?>
 
 		<h2 class="banner"><?php _e('Search Results','html5reset'); ?></h2>

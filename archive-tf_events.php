@@ -7,7 +7,7 @@ get_header();
 ?>
 <div id="eventsArchive">
     <div class="row">
-        <div class="events large-8 columns">
+        <div id="posts" class="events large-8 columns">
             <div class="row">
                 <div class="large-12 columns banner">Upcoming Events</div>
                 <?php

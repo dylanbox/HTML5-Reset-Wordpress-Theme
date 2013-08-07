@@ -47,7 +47,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div id="mainContent" class="row">
-                    <div class="large-8 small-12 columns">
+                    <div id="posts" class="large-8 small-12 columns">
             <?php else :?>
                         <div class="post">
                             <a href="<?php the_permalink(); ?>" class="image-box">

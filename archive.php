@@ -6,7 +6,7 @@
  */
  get_header(); ?>
 <div id="mainContent" class="row">
-    <div class="large-8 small-12 columns">
+    <div class="posts large-8 small-12 columns">
 		<?php if (have_posts()) : ?>
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
