@@ -3217,37 +3217,36 @@ img {
 
 /* line 105, sass/_grid.scss */
 #pageContent {
-  padding-top: 60px;
-}
-@media only screen and (max-width: 655px) and (min-width: 550px) {
-  /* line 105, sass/_grid.scss */
-  #pageContent {
-    padding-top: 117px;
-  }
-}
-@media only screen and (max-width: 549px) and (min-width: 0px) {
-  /* line 105, sass/_grid.scss */
-  #pageContent {
-    padding-top: 99px;
-  }
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 /* line 1, sass/_header.scss */
 #header {
-  background: #518ac8;
-  border-bottom: 2px solid white;
+  background: white;
+  border-bottom: 2px solid #518ac8;
   position: fixed;
   left: 0;
   z-index: 50;
   width: 100%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
-/* line 8, sass/_header.scss */
+/* line 9, sass/_header.scss */
 #header a {
   text-decoration: none;
-  color: white;
+  color: #518ac8;
   display: inline-block;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
-/* line 13, sass/_header.scss */
+/* line 15, sass/_header.scss */
 #header .logo {
   float: left;
   margin: 0;
@@ -3256,52 +3255,71 @@ img {
   font-size: 30px;
   text-transform: uppercase;
 }
-/* line 20, sass/_header.scss */
+/* line 22, sass/_header.scss */
 #header .logo a {
   padding: 11px 8px 10px;
 }
-/* line 24, sass/_header.scss */
+/* line 26, sass/_header.scss */
+#header #headerContent {
+  padding: 0 16px 16px;
+  clear: left;
+  max-height: 100px;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+/* line 31, sass/_header.scss */
+#header #headerContent i {
+  margin: 0 5px;
+}
+/* line 35, sass/_header.scss */
 #header #nav {
   overflow: hidden;
+  margin-top: 16px;
 }
-/* line 26, sass/_header.scss */
+/* line 38, sass/_header.scss */
 #header #nav li {
   float: left;
 }
-/* line 28, sass/_header.scss */
+/* line 40, sass/_header.scss */
 #header #nav li a {
   padding: 20px 10px;
   text-decoration: none;
   position: relative;
-  background: white;
-  color: #518ac8;
+  background: #518ac8;
+  color: white;
   text-align: center;
   min-width: 115px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 870px) and (min-width: 0px) {
-  /* line 28, sass/_header.scss */
+  /* line 40, sass/_header.scss */
   #header #nav li a {
     min-width: 1px;
   }
 }
 @media only screen and (max-width: 767px) and (min-width: 550px) {
-  /* line 28, sass/_header.scss */
+  /* line 40, sass/_header.scss */
   #header #nav li a {
     font-size: .9em;
   }
 }
 @media only screen and (max-width: 549px) and (min-width: 0px) {
-  /* line 28, sass/_header.scss */
+  /* line 40, sass/_header.scss */
   #header #nav li a {
     font-size: .7em;
     padding: 10px 8px 16px;
   }
-  /* line 45, sass/_header.scss */
+  /* line 58, sass/_header.scss */
   #header #nav li a:before {
     line-height: 40px !important;
   }
 }
-/* line 49, sass/_header.scss */
+/* line 62, sass/_header.scss */
 #header #nav li a:before {
   font-family: "FontAwesome";
   font-style: normal;
@@ -3310,23 +3328,23 @@ img {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #518ac8;
-  color: white;
+  background: white;
+  color: #518ac8;
   text-align: center;
   top: 0;
   left: 0;
   line-height: 60px;
   vertical-align: middle;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
-/* line 66, sass/_header.scss */
+/* line 79, sass/_header.scss */
 #header #nav li a:hover {
   text-decoration: none;
 }
-/* line 68, sass/_header.scss */
+/* line 81, sass/_header.scss */
 #header #nav li a:hover:before {
   top: -100%;
   -webkit-transition: 0.2s;
@@ -3334,33 +3352,33 @@ img {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 74, sass/_header.scss */
+/* line 87, sass/_header.scss */
 #header #nav li.about a:before {
   content: "\f05a";
 }
-/* line 77, sass/_header.scss */
+/* line 90, sass/_header.scss */
 #header #nav li.team a:before {
   content: "\f0c0";
 }
-/* line 80, sass/_header.scss */
+/* line 93, sass/_header.scss */
 #header #nav li.contact a:before {
   content: "\f095";
 }
-/* line 83, sass/_header.scss */
+/* line 96, sass/_header.scss */
 #header #nav li.resources a:before {
   content: "\f0b1";
 }
-/* line 86, sass/_header.scss */
+/* line 99, sass/_header.scss */
 #header #nav li.login a:before {
   content: "\f13e";
 }
 @media only screen and (max-width: 870px) and (min-width: 0px) {
-  /* line 89, sass/_header.scss */
+  /* line 102, sass/_header.scss */
   #header #nav li.donate a {
     padding: 10px 25px;
   }
 }
-/* line 93, sass/_header.scss */
+/* line 106, sass/_header.scss */
 #header #nav li.donate a:before {
   content: 'Donate';
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -3368,10 +3386,40 @@ img {
   font-size: 1.1em;
 }
 @media only screen and (max-width: 550px) and (min-width: 0px) {
-  /* line 93, sass/_header.scss */
+  /* line 106, sass/_header.scss */
   #header #nav li.donate a:before {
     font-size: 1em;
   }
+}
+/* line 119, sass/_header.scss */
+#header.active {
+  background: #518ac8;
+  border-bottom-color: white;
+}
+/* line 122, sass/_header.scss */
+#header.active a {
+  color: white;
+}
+/* line 125, sass/_header.scss */
+#header.active #headerContent {
+  max-height: 0;
+  visibility: hidden;
+  padding: 0px;
+  clear: none;
+}
+/* line 131, sass/_header.scss */
+#header.active #nav {
+  margin-top: 0;
+}
+/* line 133, sass/_header.scss */
+#header.active #nav li a {
+  background: white;
+  color: #518ac8;
+}
+/* line 136, sass/_header.scss */
+#header.active #nav li a:before {
+  background: #518ac8;
+  color: white;
 }
 
 /* line 10, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
@@ -3445,23 +3493,23 @@ html, body {
 }
 /* line 37, sass/_footer.scss */
 #footer #footerNav li.about a:before {
-  content: '\e803';
+  content: "\f05a";
 }
 /* line 40, sass/_footer.scss */
 #footer #footerNav li.team a:before {
-  content: '\e800';
+  content: "\f0c0";
 }
 /* line 43, sass/_footer.scss */
 #footer #footerNav li.contact a:before {
-  content: '\e80c';
+  content: "\f095";
 }
 /* line 46, sass/_footer.scss */
 #footer #footerNav li.resources a:before {
-  content: '\e815';
+  content: "\f0b1";
 }
 /* line 49, sass/_footer.scss */
 #footer #footerNav li.login a:before {
-  content: '\e805';
+  content: "\f13e";
 }
 
 /* line 1, sass/_posts.scss */
@@ -3485,65 +3533,59 @@ html, body {
 /* line 16, sass/_posts.scss */
 .home .splash-section {
   position: relative;
+  padding-top: 44.5%;
 }
-/* line 18, sass/_posts.scss */
-.home .splash-section > .row {
-  padding-top: 300px;
+/* line 20, sass/_posts.scss */
+.home #mainContent {
+  overflow: visible;
 }
-@media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 18, sass/_posts.scss */
-  .home .splash-section > .row {
-    padding-top: 160px;
-  }
-}
-/* line 24, sass/_posts.scss */
-.home .splash-section .post {
+/* line 23, sass/_posts.scss */
+.home .first-post.post {
   border-top: none;
-  margin: 0;
+  margin-top: -80px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 24, sass/_posts.scss */
-  .home .splash-section .post {
+  /* line 23, sass/_posts.scss */
+  .home .first-post.post {
     position: relative;
     bottom: auto;
   }
 }
-/* line 33, sass/_posts.scss */
-.home .splash-section .post .content .title h1 {
+/* line 32, sass/_posts.scss */
+.home .first-post.post .content .title h1 {
   background: #845fa7;
   padding: 16px;
   color: white;
   margin: 0 -16px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 33, sass/_posts.scss */
-  .home .splash-section .post .content .title h1 {
+  /* line 32, sass/_posts.scss */
+  .home .first-post.post .content .title h1 {
     font-size: 1em;
     padding: 8px;
   }
 }
-/* line 43, sass/_posts.scss */
-.home .splash-section .post .content .title:hover h1 {
+/* line 42, sass/_posts.scss */
+.home .first-post.post .content .title:hover h1 {
   background: #6a4b88;
 }
 
-/* line 54, sass/_posts.scss */
+/* line 52, sass/_posts.scss */
 .single .splash-section {
-  min-height: 400px;
+  padding-top: 44.5%;
   margin-bottom: -100px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 54, sass/_posts.scss */
+  /* line 52, sass/_posts.scss */
   .single .splash-section {
-    min-height: 150px;
     margin-bottom: 0;
   }
 }
-/* line 62, sass/_posts.scss */
+/* line 59, sass/_posts.scss */
 .single #mainContent {
   border-top: 4px solid #518ac8;
 }
-/* line 64, sass/_posts.scss */
+/* line 61, sass/_posts.scss */
 .single #mainContent .title {
   text-transform: uppercase;
   font-weight: 600;
@@ -3555,22 +3597,22 @@ html, body {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 70, sass/_posts.scss */
+  /* line 67, sass/_posts.scss */
   .single #mainContent .title h1 {
     font-size: 1.2em;
   }
 }
-/* line 76, sass/_posts.scss */
+/* line 73, sass/_posts.scss */
 .single #mainContent .content {
   min-height: 300px;
 }
 
-/* line 84, sass/_posts.scss */
+/* line 81, sass/_posts.scss */
 .home .no-thumbnail .post, .home .no-thumbnail #mainContent, .single .no-thumbnail .post, .single .no-thumbnail #mainContent {
   border-top: none;
 }
 
-/* line 90, sass/_posts.scss */
+/* line 87, sass/_posts.scss */
 .post {
   overflow: hidden;
   background: white;
@@ -3578,27 +3620,21 @@ html, body {
   margin: 0 -8px;
   border-top: 4px solid #845fa7;
 }
-/* line 96, sass/_posts.scss */
+/* line 93, sass/_posts.scss */
 .post .image-box {
   margin: 0 -16px;
   display: block;
 }
-/* line 99, sass/_posts.scss */
+/* line 96, sass/_posts.scss */
 .post .image-box .image {
-  height: 300px;
+  padding-top: 38.7%;
   display: block;
 }
-@media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 99, sass/_posts.scss */
-  .post .image-box .image {
-    height: 150px;
-  }
-}
-/* line 108, sass/_posts.scss */
+/* line 102, sass/_posts.scss */
 .post .content a {
   text-decoration: none;
 }
-/* line 111, sass/_posts.scss */
+/* line 105, sass/_posts.scss */
 .post .content .title {
   text-transform: uppercase;
   font-weight: 600;
@@ -3610,16 +3646,16 @@ html, body {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 117, sass/_posts.scss */
+  /* line 111, sass/_posts.scss */
   .post .content .title h1 {
     font-size: 1.2em;
   }
 }
-/* line 123, sass/_posts.scss */
+/* line 117, sass/_posts.scss */
 .post .content .info {
   margin: 8px 0;
 }
-/* line 125, sass/_posts.scss */
+/* line 119, sass/_posts.scss */
 .post .content .info .category {
   background: #845fa7;
   font-weight: 600;
@@ -3634,20 +3670,20 @@ html, body {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 125, sass/_posts.scss */
+  /* line 119, sass/_posts.scss */
   .post .content .info .category {
     font-size: .7em;
   }
 }
-/* line 137, sass/_posts.scss */
+/* line 131, sass/_posts.scss */
 .post .content .info .category a {
   color: white;
 }
-/* line 140, sass/_posts.scss */
+/* line 134, sass/_posts.scss */
 .post .content .info .category:hover {
   background: #6a4b88;
 }
-/* line 144, sass/_posts.scss */
+/* line 138, sass/_posts.scss */
 .post .content .info .meta {
   width: auto;
   overflow: auto;
@@ -3655,25 +3691,25 @@ html, body {
   font-size: .9em;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 144, sass/_posts.scss */
+  /* line 138, sass/_posts.scss */
   .post .content .info .meta {
     font-size: .8em;
   }
 }
-/* line 154, sass/_posts.scss */
+/* line 148, sass/_posts.scss */
 .post .content .meta, .post .content .excerpt {
   position: relative;
 }
-/* line 157, sass/_posts.scss */
+/* line 151, sass/_posts.scss */
 .post .content .excerpt {
   font-size: .9em;
   padding-top: 0px;
 }
-/* line 161, sass/_posts.scss */
+/* line 155, sass/_posts.scss */
 .post .content .read-more {
   float: right;
 }
-/* line 165, sass/_posts.scss */
+/* line 159, sass/_posts.scss */
 .post .post-thumbnail {
   min-height: 200px;
 }
@@ -3859,22 +3895,21 @@ html, body {
 
 /* line 2, sass/_pages.scss */
 #page .splash-section {
-  min-height: 400px;
+  padding-top: 43%;
   margin-bottom: -100px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
   /* line 2, sass/_pages.scss */
   #page .splash-section {
-    min-height: 150px;
     margin-bottom: 0;
   }
 }
 
-/* line 12, sass/_pages.scss */
+/* line 11, sass/_pages.scss */
 #page #mainContent {
   border-top: 4px solid #518ac8;
 }
-/* line 14, sass/_pages.scss */
+/* line 13, sass/_pages.scss */
 #page #mainContent .title {
   text-transform: uppercase;
   font-weight: 600;
@@ -3886,12 +3921,12 @@ html, body {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 20, sass/_pages.scss */
+  /* line 19, sass/_pages.scss */
   #page #mainContent .title h1 {
     font-size: 1.2em;
   }
 }
-/* line 26, sass/_pages.scss */
+/* line 25, sass/_pages.scss */
 #page #mainContent .content {
   min-height: 300px;
 }

@@ -35,19 +35,19 @@
                 }
             }
             &.about a:before {
-                content: '\e803';
+                content: $info-sign;
             }
             &.team a:before {
-                content: '\e800';
+                content: $group;
             }
             &.contact a:before {
-                content: '\e80c';
+                content: $phone;
             }
             &.resources a:before {
-                content: '\e815';
+                content: $briefcase;
             }
             &.login a:before {
-                content: '\e805';
+                content: $unlock-alt;
             }
         }
     }

@@ -8,18 +8,21 @@ get_header(); ?>
 
 <?php if (have_posts()) : ?>
     <!-- This is home.php -->
-    <?php $post = $posts[0]; $postCount=0;?>
-    <?php while (have_posts()) : the_post(); ?>
+    <div id="firstPost" class="row">
+        <?php $post = $posts[0]; $postCount=0;?>
+        <?php while (have_posts()) : the_post(); ?>
 
-            <?php $postCount++;
-            if( !$paged && $postCount == 1) :?>
-                <?php if(has_post_thumbnail()): ?>
-                    <?php echo '<div class="splash-section full-background" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
-                <?php else: ?>
-                    <div class="no-thumbnail">
-                <?php endif; ?>
-                    <div class="row">
-                        <div class="first-post post large-8 small-12 columns">
+                <?php $postCount++;
+                if( !$paged && $postCount == 1) :?>
+                    <?php if(has_post_thumbnail()): ?>
+                        <?php echo '<div class="splash-section full-background" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');"></div>'?>
+                    <?php else: ?>
+                        <div class="no-thumbnail"></div>
+                    <?php endif; ?>
+                </div>
+                <div id="mainContent" class="row">
+                    <div id="posts" class="large-8 small-12 columns">
+                        <div class="first-post post">
                             <div class="content">
                                 <a href="<?php the_permalink(); ?>" class="title">
                                     <h1><?php the_title(); ?></h1>
@@ -44,10 +47,6 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div id="mainContent" class="row">
-                    <div id="posts" class="large-8 small-12 columns">
             <?php else :?>
                         <div class="post">
                             <a href="<?php the_permalink(); ?>" class="image-box">

@@ -119,6 +119,9 @@
 		<header id="header" role="header">
 		    <div class="header-content row">
     			<div class="columns logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+    		    <div id="headerContent" class="columns">
+    		        <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Widgets')) : else : ?><?php endif; ?>
+    		    </div>
                 <nav id="nav" class="columns right" role="navigation">
         			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
         		</nav>

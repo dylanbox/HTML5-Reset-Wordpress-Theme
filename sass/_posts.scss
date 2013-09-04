@@ -15,34 +15,32 @@
 .home {
     .splash-section {
         position: relative;
-        > .row {
-            padding-top: 300px;
-            @include media-query() {
-                padding-top: 160px;
-            }
+        padding-top: 44.5%;
+    }
+    #mainContent {
+        overflow: visible;
+    }
+    .first-post.post {
+        border-top: none;
+        margin-top: -80px;
+        @include media-query() {
+            position: relative;
+            bottom: auto;
         }
-        .post {
-            border-top: none;
-            margin: 0;
-            @include media-query() {
-                position: relative;
-                bottom: auto;
-            }
-            .content {
-                .title {
-                    h1 {
-                        background: $purple;
-                        padding: $columnPadding;
-                        color: $white;
-                        margin: 0 -1*$columnPadding;
-                        @include media-query() {
-                            font-size: 1em;
-                            padding: $columnPadding/2;
-                        }
+        .content {
+            .title {
+                h1 {
+                    background: $purple;
+                    padding: $columnPadding;
+                    color: $white;
+                    margin: 0 -1*$columnPadding;
+                    @include media-query() {
+                        font-size: 1em;
+                        padding: $columnPadding/2;
                     }
-                    &:hover h1 {
-                        background: darken($purple, 10%);
-                    }
+                }
+                &:hover h1 {
+                    background: darken($purple, 10%);
                 }
             }
         }
@@ -52,10 +50,9 @@
 
 .single {
     .splash-section {
-        min-height: 400px;
+        padding-top: 44.5%;
         margin-bottom: -100px;
         @include media-query() {
-            min-height: 150px;
             margin-bottom: 0;
         }
     }
@@ -97,11 +94,8 @@
         margin: 0 -1*$columnPadding;
         display: block;
         .image {
-            height: 300px;
+            padding-top: 38.7%;
             display: block;
-            @include media-query() {
-                height: 150px;
-            }
         }
     }
     .content {

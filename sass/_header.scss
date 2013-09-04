@@ -1,14 +1,16 @@
 #header {
-    background: $blue;
-    border-bottom: 2px solid $white;
+    background: $white;
+    border-bottom: 2px solid $blue;
     position: fixed;
     left:     0;
     z-index:  50;
     width:    100%;
+    @include transition(.5s);
     a {
         text-decoration: none;
-        color: $white;
+        color: $blue;
         display: inline-block;
+        @include transition(.5s);
     }
     .logo {
         float: left;
@@ -21,18 +23,29 @@
             padding: 11px 8px 10px;
         }
     }
+    #headerContent {
+        padding: 0 (8 + $columnPadding/2) $columnPadding;
+        clear: left;
+        max-height: 100px;
+        @include transition(max-height .5s);
+        i {
+            margin: 0 5px;
+        }
+    }
     #nav {
         overflow: hidden;
+        margin-top: $columnPadding;
         li {
             float: left;
             a {
                 padding: 20px 10px;
                 text-decoration: none;
                 position: relative;
-                background: $white;
-                color: $blue;
+                background: $blue;
+                color: $white;
                 text-align: center;
                 min-width: 115px;
+                @include transition(.5s);
                 @include media-query(870px) {
                     min-width: 1px;
                 }
@@ -54,14 +67,14 @@
                     position: absolute;
                     height: 100%;
                     width: 100%;
-                    background: $blue;
-                    color: $white;
+                    background: $white;
+                    color: $blue;
                     text-align: center;
                     top: 0;
                     left: 0;
                     line-height: 60px;
                     vertical-align: middle;
-                    @include transition(.2s);
+                    @include transition(.5s);
                 }
                 &:hover {
                     text-decoration: none;
@@ -98,6 +111,31 @@
                     @include media-query(550px) {
                         font-size: 1em;
                     }
+                }
+            }
+        }
+    }
+
+    &.active {
+        background:          $blue;
+        border-bottom-color: $white;
+        a {
+            color: $white;
+        }
+        #headerContent {
+            max-height: 0;
+            visibility: hidden;
+            padding: 0px;
+            clear: none;
+        }
+        #nav {
+            margin-top: 0;
+            li a {
+                background: $white;
+                color:      $blue;
+                &:before {
+                    background: $blue;
+                    color:      $white;
                 }
             }
         }

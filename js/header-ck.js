@@ -1,0 +1,1 @@
+(function(e){e(window).scroll(function(){var t=e(window).scrollTop(),n=e("#header"),r=n.outerHeight();t>r?n.addClass("active"):n.removeClass("active");e("#pageContent").css("padding-top",r)})})(window.jQuery);jQuery(document).ready(function(e){var t=e("#header"),n=t.outerHeight();e("#pageContent").css("padding-top",n)});

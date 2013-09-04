@@ -134,6 +134,15 @@
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
     	) );
+
+    	register_sidebar( array(
+    		'name' => 'Header Widgets',
+    		'id' => 'header-widgets',
+    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    		'after_widget' => '</aside>',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    	) );
     }
     add_action( 'widgets_init', 'html5reset_widgets_init' );
 
@@ -169,6 +178,8 @@
       $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
       return $excerpt;
     }
+
+    wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/header.js', array('jquery'));
 
     include 'events/cpt-events.php';
     include 'photos/photos.php';

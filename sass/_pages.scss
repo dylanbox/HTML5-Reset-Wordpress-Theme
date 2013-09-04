@@ -1,9 +1,8 @@
 #page {
     .splash-section {
-        min-height: 400px;
+        padding-top: 43%;
         margin-bottom: -100px;
         @include media-query() {
-            min-height: 150px;
             margin-bottom: 0;
         }
     }

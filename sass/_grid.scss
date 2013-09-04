@@ -102,12 +102,6 @@ img {
     padding-bottom: 50px;
 }
 
-#pageContent {
-    padding-top:     60px;
-    @include media-query(655px, 550px) {
-        padding-top: 117px;
-    }
-    @include media-query(549px) {
-        padding-top: 99px;
-    }
+#pageContent{
+    @include transition(.2s);
 }
