@@ -1,6 +1,10 @@
 #header {
     background: $blue;
     border-bottom: 2px solid $white;
+    position: fixed;
+    left:     0;
+    z-index:  50;
+    width:    100%;
     a {
         text-decoration: none;
         color: $white;
@@ -68,19 +72,33 @@
                 }
             }
             &.about a:before {
-                content: '\e803';
+                content: $info-sign;
             }
             &.team a:before {
-                content: '\e800';
+                content: $group;
             }
             &.contact a:before {
-                content: '\e80c';
+                content: $phone;
             }
             &.resources a:before {
-                content: '\e815';
+                content: $briefcase;
             }
             &.login a:before {
-                content: '\e805';
+                content: $unlock-alt;
+            }
+            &.donate a {
+                @include media-query(870px) {
+                    padding: 10px 25px;
+                }
+                &:before {
+                    content: 'Donate';
+                    font-family: $headerFontFamily;
+                    text-transform: uppercase;
+                    font-size: 1.1em;
+                    @include media-query(550px) {
+                        font-size: 1em;
+                    }
+                }
             }
         }
     }
