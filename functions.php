@@ -175,6 +175,7 @@
 	}
 
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size( 1250, 538, true );
 
     function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);

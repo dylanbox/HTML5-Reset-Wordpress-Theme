@@ -15,8 +15,8 @@ get_header(); ?>
                 <?php $postCount++;
                 if( !$paged && $postCount == 1) :?>
                     <?php if(has_post_thumbnail()): ?>
-                        <?php echo '<div class="splash-section" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
-                            <?php echo '<h1 style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
+                        <?php echo '<div class="splash-section" style="background-image:url('. wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' )[0] .');">'?>
+                            <?php echo '<h1 style="background-image:url('. wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' )[0] .');">'?>
                                 <?php bloginfo('description'); ?>
                             </h1>
                             <div id="homepageDescription">

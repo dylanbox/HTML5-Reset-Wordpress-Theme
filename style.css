@@ -2460,70 +2460,75 @@ body, p {
 }
 
 /* line 8, sass/_typography.scss */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 12, sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
 }
-/* line 12, sass/_typography.scss */
+/* line 16, sass/_typography.scss */
 h1.subheader, h2.subheader, h3.subheader, h4.subheader, h5.subheader, h6.subheader {
   text-transform: uppercase;
 }
-/* line 15, sass/_typography.scss */
+/* line 19, sass/_typography.scss */
 h1.small, h2.small, h3.small, h4.small, h5.small, h6.small {
   font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-/* line 20, sass/_typography.scss */
+/* line 24, sass/_typography.scss */
 h1 {
   font-size: 30px;
   margin: 15px 0;
 }
 
-/* line 25, sass/_typography.scss */
+/* line 29, sass/_typography.scss */
 h2 {
   font-size: 24px;
   margin: 10px 0;
 }
 
-/* line 30, sass/_typography.scss */
+/* line 34, sass/_typography.scss */
 h3 {
   font-size: 20px;
   margin: 8px 0;
 }
 
-/* line 35, sass/_typography.scss */
+/* line 39, sass/_typography.scss */
 h4 {
   font-size: 16px;
   margin: 6px 0;
 }
 
-/* line 40, sass/_typography.scss */
+/* line 44, sass/_typography.scss */
 h5 {
   font-size: 14px;
   margin: 4px 0;
 }
 
-/* line 45, sass/_typography.scss */
+/* line 49, sass/_typography.scss */
 h6 {
   font-size: 12px;
 }
 
-/* line 49, sass/_typography.scss */
+/* line 53, sass/_typography.scss */
 select, input, textarea {
   color: #333;
 }
 
-/* line 51, sass/_typography.scss */
+/* line 55, sass/_typography.scss */
 a {
   color: #03f;
 }
-/* line 53, sass/_typography.scss */
+/* line 57, sass/_typography.scss */
 a:hover {
   color: #69f;
 }
 
-/* line 66, sass/_typography.scss */
+/* line 70, sass/_typography.scss */
 .banner {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2540,17 +2545,17 @@ a:hover {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 78, sass/_typography.scss */
+/* line 82, sass/_typography.scss */
 .banner:hover {
   background: #494a4c;
   color: white;
 }
 
-/* line 84, sass/_typography.scss */
+/* line 88, sass/_typography.scss */
 .read-more {
   text-align: right;
 }
-/* line 86, sass/_typography.scss */
+/* line 90, sass/_typography.scss */
 .read-more:hover {
   text-decoration: underline;
 }
@@ -2631,11 +2636,12 @@ a:hover {
   text-transform: uppercase;
   padding: 5px;
   margin: 3px;
+  display: inline-block;
   vertical-align: middle;
   letter-spacing: 1px;
   text-decoration: none;
 }
-/* line 50, sass/_elements.scss */
+/* line 51, sass/_elements.scss */
 .tags a:hover {
   background: #6a4b88;
 }
@@ -3252,6 +3258,29 @@ img {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+}
+
+/*==========ALIGNMENT========*/
+/* line 117, sass/_grid.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.625em;
+}
+
+/* line 122, sass/_grid.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.625em;
+}
+
+/* line 127, sass/_grid.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* line 1, sass/_header.scss */

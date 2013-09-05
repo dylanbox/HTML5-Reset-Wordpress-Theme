@@ -5,6 +5,10 @@ body, p{
     font-weight: 300;
 }
 
+p {
+    margin-bottom: 1em;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $headerFontFamily;
     font-weight: 400;
