@@ -16,6 +16,9 @@
                     <div>
                         <p class="text"><?php the_content(); ?></p>
                     </div>
+                    <div class="tags">
+					   	<p><?php the_tags('Tags:',''); ?></p>
+				   	</div>
                 </div>
             	<?php comments_template(); ?>
 <?php endwhile; endif; ?>

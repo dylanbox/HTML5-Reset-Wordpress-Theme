@@ -15,7 +15,11 @@ $red: #f37d69;
 $grey: #626366;
 $black: #000000;
 
-$buttonRadius: 4px;
+//Color Varients:
+$darkBlue: darken($blue, 45%);
+
+
+$buttonRadius: 2px;
 $sectionBorder: 1px solid lighten($grey, 20%);
 
 $imagePath: 'images/';

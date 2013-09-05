@@ -10,7 +10,7 @@
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js gt-ie9" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
 <head id="<?php echo of_get_option('meta_headid'); ?>" data-template-set="html5-reset-wordpress-theme">
@@ -108,7 +108,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <?php wp_enqueue_script("jquery"); ?>
-    <?php wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/header.js', array('jquery')); ?>
+    <?php wp_enqueue_script('header_js', get_bloginfo('template_url').'/js/header.js', array('jquery')); ?>
 
 	<?php wp_head(); ?>
 
@@ -121,7 +121,7 @@
 		    <div class="header-content row">
     			<div class="columns logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
     		    <div id="headerContent" class="columns">
-    		        <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Widgets')) : else : ?><?php endif; ?>
+    		        <?php dynamic_sidebar( 'Header Description' ); ?>
     		    </div>
                 <nav id="nav" class="columns right" role="navigation">
         			<?php wp_nav_menu( array('menu' => 'primary') ); ?>

@@ -5,7 +5,7 @@
 * @since HTML5 Reset 2.0
 */
 get_header(); ?>
-
+<?php wp_enqueue_script('font_resize_js', get_bloginfo('template_url').'/js/font-resize.js', array('jquery')); ?>
 <?php if (have_posts()) : ?>
     <!-- This is home.php -->
     <div id="firstPost" class="">
@@ -15,8 +15,13 @@ get_header(); ?>
                 <?php $postCount++;
                 if( !$paged && $postCount == 1) :?>
                     <?php if(has_post_thumbnail()): ?>
-                        <?php echo '<div class="splash-section full-background" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
-                            <h1><?php bloginfo('description'); ?></h1>
+                        <?php echo '<div class="splash-section" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
+                            <?php echo '<h1 style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?>
+                                <?php bloginfo('description'); ?>
+                            </h1>
+                            <div id="homepageDescription">
+                		        <?php dynamic_sidebar( 'Homepage Description' ); ?>
+                		    </div>
                         </div>
                     <?php else: ?>
                         <div class="no-thumbnail"></div>

@@ -6,8 +6,6 @@
         var $el = $('#header');
         var headerHeight = $el.outerHeight();
 
-
-
         if (windowTop > headerHeight) {
             $el.addClass('active');
         }
@@ -15,8 +13,12 @@
             $el.removeClass('active');
         }
 
-        $('#pageContent').css('padding-top', headerHeight);
+    });
 
+    $(window).resize(function() {
+        var $el = $('#header');
+        var headerHeight = $el.outerHeight();
+        $('#pageContent').css('padding-top', headerHeight);
     });
 
 })(window.jQuery);

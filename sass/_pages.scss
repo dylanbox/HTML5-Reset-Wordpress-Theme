@@ -1,6 +1,7 @@
 #page {
     .splash-section {
         padding-top: 43%;
+        max-height: 1250px;
         margin-bottom: -100px;
         @include media-query() {
             margin-bottom: 0;

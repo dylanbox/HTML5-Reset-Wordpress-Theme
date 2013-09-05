@@ -16,7 +16,7 @@
         @include border-right-radius(0);
     }
     input#searchsubmit {
-        background: $grey;
+        background: $darkBlue;
         color: $white;
         margin-top: -3px;
         margin-left: -4px;
@@ -24,12 +24,31 @@
         border: none;
         font-family: $bodyFontFamily;
         display: inline-block;
-        @include box-shadow(0 2px darken($grey, 10%));
+        @include box-shadow(0 2px darken($darkBlue, 10%));
         @include border-left-radius(0);
         @include border-right-radius($buttonRadius);
         @include transition(.2s);
         &:hover {
-            background: darken($grey, 10%);
+            background: darken($darkBlue, 10%);
+        }
+    }
+}
+
+.tags {
+    margin-top: 20px;
+    a {
+        color: $white;
+        background: $purple;
+        font-weight: 600;
+        font-size: .9em;
+        text-transform: uppercase;
+        padding: 5px;
+        margin: 3px;
+        vertical-align: middle;
+        letter-spacing: 1px;
+        text-decoration: none;
+        &:hover {
+            background: darken($purple, 10%);
         }
     }
 }

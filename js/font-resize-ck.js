@@ -1,0 +1,1 @@
+(function(e){causeRepaintsOn=e("h1");e(window).resize(function(){causeRepaintsOn.css("z-index",1)})})(window.jQuery);

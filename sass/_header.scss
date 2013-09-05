@@ -8,7 +8,7 @@
     @include transition(.5s);
     a {
         text-decoration: none;
-        color: $blue;
+        color: $darkBlue;
         display: inline-block;
         @include transition(.5s);
     }
@@ -35,13 +35,22 @@
     #nav {
         overflow: hidden;
         margin-top: $columnPadding;
+        @include media-query(650px) {
+            float: none;
+            width: 100%;
+            text-align: center
+        }
         li {
             float: left;
+            @include media-query(650px) {
+                display: inline-block;
+                float: none;
+            }
             a {
                 padding: 20px 10px;
                 text-decoration: none;
                 position: relative;
-                background: $blue;
+                background: $darkBlue;
                 color: $white;
                 text-align: center;
                 min-width: 115px;
@@ -68,7 +77,7 @@
                     height: 100%;
                     width: 100%;
                     background: $white;
-                    color: $blue;
+                    color: $darkBlue;
                     text-align: center;
                     top: 0;
                     left: 0;
@@ -118,7 +127,7 @@
     }
 
     &.active {
-        background:          $blue;
+        background:          $darkBlue;
         a {
             color: $white;
         }
@@ -132,9 +141,9 @@
             margin-top: 0;
             li a {
                 background: $white;
-                color:      $blue;
+                color:      $darkBlue;
                 &:before {
-                    background: $blue;
+                    background: $darkBlue;
                     color:      $white;
                 }
             }
