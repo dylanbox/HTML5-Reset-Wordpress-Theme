@@ -179,8 +179,6 @@
       return $excerpt;
     }
 
-    wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/header.js', array('jquery'));
-
     include 'events/cpt-events.php';
     include 'photos/photos.php';
     include 'infinite-scroll.php';

@@ -38,7 +38,7 @@ get_header(); ?>
                             </div>
                         </div>
                         <div class="excerpt">
-                            <p class="content"><?php echo excerpt(55); ?></p>
+                            <p class="text"><?php echo excerpt(55); ?></p>
                             <a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
                         </div>
                     </div>

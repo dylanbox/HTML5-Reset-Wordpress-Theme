@@ -8,6 +8,7 @@ body, p{
 h1, h2, h3, h4, h5, h6 {
     font-family: $headerFontFamily;
     font-weight: 400;
+    letter-spacing: 2px;
     &.subheader {
         text-transform: uppercase;
     }
@@ -68,15 +69,15 @@ a {
     text-align: center;
     font-family: $headerFontFamily;
     font-weight: 600;
-    color: lighten($black, 10%);
-    background: darken($white, 10%);
+    color: $white;
+    background: $grey;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5em;
     @include transition(.2s);
     &:hover {
-        background: darken($white, 20%);
-        color: lighten($black, 10%);
+        background: darken($grey, 10%);
+        color:      $white;
     }
 }
 

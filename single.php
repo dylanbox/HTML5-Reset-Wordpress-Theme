@@ -12,9 +12,9 @@
         <div id="mainContent" class="row">
             <div class="page large-8 small-12 columns">
                 <div class="content">
-                    <h1><?php the_title(); ?></h1>
-                    <div class="text">
-                        <p><?php the_content(); ?></p>
+                    <h1 class="title"><?php the_title(); ?></h1>
+                    <div>
+                        <p class="text"><?php the_content(); ?></p>
                     </div>
                 </div>
             	<?php comments_template(); ?>

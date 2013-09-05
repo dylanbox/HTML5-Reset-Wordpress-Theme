@@ -32,7 +32,7 @@ get_header(); ?>
                                 </a>
                                 <h6 class="meta"><?php the_date( 'M, j, Y', 'on ' ); ?></h6>
                                 <div class="excerpt">
-                                    <p><?php echo excerpt(25); ?></p>
+                                    <p class="text"><?php echo excerpt(25); ?></p>
                                     <a class="read-more" href="<?php the_permalink(); ?>">Read More &raquo;</a>
                                 </div>
 

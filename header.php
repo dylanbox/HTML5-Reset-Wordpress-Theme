@@ -108,6 +108,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <?php wp_enqueue_script("jquery"); ?>
+    <?php wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/header.js', array('jquery')); ?>
 
 	<?php wp_head(); ?>
 
