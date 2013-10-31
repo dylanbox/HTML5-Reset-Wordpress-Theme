@@ -13,14 +13,17 @@
         $end_time=date('g:i a', $custom["tf_events_enddate"][0]);
     ?>
     <?php if (has_post_thumbnail()) : ?>
-        <?php echo '<div class="splash-section full-background" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?></div>
+        <?php
+            $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' );
+        ?>
+        <?php echo '<div class="splash-section full-background" style="background-image:url('. $splash_src[0] .');">'?></div>
         <div id="mainContent" class="row">
     <?php else : ?>
         <div id="mainContent" class="row no-thumbnail">
     <?php endif; ?>
             <div class="page large-8 small-12 columns">
                 <div class="content">
-                    <h1><?php the_title(); ?></h1>
+                    <h1 class="title"><?php the_title(); ?></h1>
                     <div class="date">
                         <h4 class="meta"><?php echo 'From '. $start_time.' on '.$start_date.'<br /> To '.$end_time.' on '.$end_date ?></h5>
 

@@ -20,9 +20,20 @@
         background-position: center center;
         background-attachment: scroll;
         @include background-size(cover);
+        &.no-thumbnail {
+            padding-top: 25px;
+            h1{
+                position: relative;
+                top: auto;
+                text-shadow: none;
+            }
+            #homepageDescription {
+                background: none;
+                color:      $white;
+            }
+        }
         h1 {
             position:    absolute;
-            top:         0%;
             color:       $white;
             top:         4%;
             font-size:   8em;
@@ -80,6 +91,7 @@
 .home {
     .splash-section {
         position: relative;
+        background: #0c1927;
         h1 {
             width:    100%;
             padding:  $columnPadding/2;

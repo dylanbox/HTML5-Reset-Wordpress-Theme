@@ -176,6 +176,7 @@
 
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size( 1250, 538, true );
+    add_image_size('preview-thumbnail', 661, 256);
 
     function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);

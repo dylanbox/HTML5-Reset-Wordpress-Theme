@@ -8,15 +8,18 @@ get_header(); ?>
 <?php wp_enqueue_script('font_resize_js', get_bloginfo('template_url').'/js/font-resize.js', array('jquery')); ?>
 <?php if (have_posts()) : ?>
     <!-- This is home.php -->
-    <div id="firstPost" class="">
+    <div id="firstPost">
         <?php $post = $posts[0]; $postCount=0;?>
         <?php while (have_posts()) : the_post(); ?>
 
                 <?php $postCount++;
                 if( !$paged && $postCount == 1) :?>
                     <?php if(has_post_thumbnail()): ?>
-                        <?php echo '<div class="splash-section" style="background-image:url('. wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' )[0] .');">'?>
-                            <?php echo '<h1 style="background-image:url('. wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' )[0] .');">'?>
+                        <?php
+                            $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='preview-thumbnail' );
+                        ?>
+                        <?php echo '<div class="splash-section" style="background-image:url('. $splash_src[0] .');">'?>
+                            <?php echo '<h1 style="background-image:url('. $splash_src[0] .');">'?>
                                 <?php bloginfo('description'); ?>
                             </h1>
                             <div id="homepageDescription">
@@ -24,7 +27,14 @@ get_header(); ?>
                 		    </div>
                         </div>
                     <?php else: ?>
-                        <div class="no-thumbnail"></div>
+                        <div class="splash-section no-thumbnail">
+                            <h1 style="color:#ffffff;">
+                                <?php bloginfo('description'); ?>
+                            </h1>
+                            <div id="homepageDescription">
+                		        <?php dynamic_sidebar( 'Homepage Description' ); ?>
+                		    </div>
+                        </div>
                     <?php endif; ?>
                 </div>
                 <div id="mainContent" class="row">
