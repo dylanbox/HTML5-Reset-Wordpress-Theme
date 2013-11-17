@@ -1,10 +1,11 @@
 #searchform {
     label {
-        font-size: 20px;
-        margin: 8px 0;
-        font-weight: 400;
-        font-family: $headerFontFamily;
-        display: block;
+        font-size:      20px;
+        margin:         8px 0;
+        font-weight:    400;
+        font-family:    $headerFontFamily;
+        display:        block;
+        text-transform: uppercase;
     }
     input#s {
         border: $sectionBorder;

@@ -156,10 +156,10 @@
     	register_sidebar( array(
     		'name' => 'Events Widget Location',
     		'id' => 'events-widget',
-    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    		'after_widget' => '</aside>',
-    		'before_title' => '<h3 class="widget-title">',
-    		'after_title' => '</h3>',
+    		'before_widget' => '',
+    		'after_widget' => '',
+    		'before_title' => '<a href="<?php echo get_site_url(); ?>/events" class="banner">',
+    		'after_title' => '</a>',
     	) );
 
     }
@@ -184,9 +184,23 @@
 		);
 	}
 
+    //New Image Sizes
+
     add_theme_support('post-thumbnails');
     add_image_size('fullscreen-background', 1250, 538, true );
     add_image_size('preview-thumbnail', 661, 256);
+
+    //Excerpt Changing
+
+    function new_excerpt_length($length) {
+        return 20;
+    }
+    add_filter('excerpt_length', 'new_excerpt_length', 999);
+
+    function new_excerpt_more( $more ) {
+    	return '[...]';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
 
     function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);

@@ -2480,55 +2480,60 @@ h1.small, h2.small, h3.small, h4.small, h5.small, h6.small {
 }
 
 /* line 24, sass/_typography.scss */
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+/* line 28, sass/_typography.scss */
 h1 {
   font-size: 30px;
   margin: 15px 0;
 }
 
-/* line 29, sass/_typography.scss */
+/* line 33, sass/_typography.scss */
 h2 {
   font-size: 24px;
   margin: 10px 0;
 }
 
-/* line 34, sass/_typography.scss */
+/* line 38, sass/_typography.scss */
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 8px 0;
 }
 
-/* line 39, sass/_typography.scss */
+/* line 43, sass/_typography.scss */
 h4 {
   font-size: 16px;
   margin: 6px 0;
 }
 
-/* line 44, sass/_typography.scss */
+/* line 48, sass/_typography.scss */
 h5 {
   font-size: 14px;
   margin: 4px 0;
 }
 
-/* line 49, sass/_typography.scss */
+/* line 53, sass/_typography.scss */
 h6 {
   font-size: 12px;
 }
 
-/* line 53, sass/_typography.scss */
+/* line 57, sass/_typography.scss */
 select, input, textarea {
   color: #333;
 }
 
-/* line 55, sass/_typography.scss */
+/* line 59, sass/_typography.scss */
 a {
   color: #03f;
 }
-/* line 57, sass/_typography.scss */
+/* line 61, sass/_typography.scss */
 a:hover {
   color: #69f;
 }
 
-/* line 70, sass/_typography.scss */
+/* line 74, sass/_typography.scss */
 .banner {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2547,17 +2552,17 @@ a:hover {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 84, sass/_typography.scss */
+/* line 88, sass/_typography.scss */
 .banner:hover {
   background: #494a4c;
   color: white;
 }
 
-/* line 90, sass/_typography.scss */
+/* line 94, sass/_typography.scss */
 .read-more {
   text-align: right;
 }
-/* line 92, sass/_typography.scss */
+/* line 96, sass/_typography.scss */
 .read-more:hover {
   text-decoration: underline;
 }
@@ -2569,8 +2574,9 @@ a:hover {
   font-weight: 400;
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   display: block;
+  text-transform: uppercase;
 }
-/* line 9, sass/_elements.scss */
+/* line 10, sass/_elements.scss */
 #searchform input#s {
   border: 1px solid #959699;
   border-right: none;
@@ -2590,7 +2596,7 @@ a:hover {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 18, sass/_elements.scss */
+/* line 19, sass/_elements.scss */
 #searchform input#searchsubmit {
   background: #0c1927;
   color: white;
@@ -2620,16 +2626,16 @@ a:hover {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 31, sass/_elements.scss */
+/* line 32, sass/_elements.scss */
 #searchform input#searchsubmit:hover {
   background: black;
 }
 
-/* line 37, sass/_elements.scss */
+/* line 38, sass/_elements.scss */
 .tags {
   margin-top: 20px;
 }
-/* line 39, sass/_elements.scss */
+/* line 40, sass/_elements.scss */
 .tags a {
   color: white;
   background: #845fa7;
@@ -2643,7 +2649,7 @@ a:hover {
   letter-spacing: 1px;
   text-decoration: none;
 }
-/* line 51, sass/_elements.scss */
+/* line 52, sass/_elements.scss */
 .tags a:hover {
   background: #6a4b88;
 }
@@ -3879,6 +3885,113 @@ html, body {
   min-height: 200px;
 }
 
+/* line 1, sass/_events.scss */
+.tribe-events-list-widget-events {
+  list-style: none;
+  background: white;
+  padding: 0 16px 16px;
+  margin: 0 0 10px;
+  border-top: 4px solid #44b87b;
+}
+/* line 9, sass/_events.scss */
+.tribe-events-list-widget-events .entry-title a {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+/* line 17, sass/_events.scss */
+.tribe-events-widget-link {
+  text-align: right;
+}
+
+/* line 22, sass/_events.scss */
+#tribe-events-pg-template {
+  background: white;
+  margin: 0 8px;
+  padding: 0 8px;
+}
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+  /* line 22, sass/_events.scss */
+  #tribe-events-pg-template {
+    max-width: none !important;
+  }
+}
+/* line 29, sass/_events.scss */
+#tribe-events-pg-template .splash-section {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+/* line 35, sass/_events.scss */
+#tribe-bar-views .tribe-bar-views-list {
+  z-index: 1 !important;
+}
+
+/* line 39, sass/_events.scss */
+#tribe-bar-form input[type="text"][style] {
+  z-index: 1 !important;
+}
+
+@media only screen and (max-width: 550px) and (min-width: 0px) {
+  /* line 43, sass/_events.scss */
+  #tribe-events-content {
+    min-width: 550px;
+    background: white;
+    padding: 2px 8px 2px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+  /* line 51, sass/_events.scss */
+  .tribe-events-thismonth, .tribe-events-othermonth {
+    min-width: 50px;
+    max-width: 60px;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+  /* line 57, sass/_events.scss */
+  #tribe-events-calendar-header {
+    padding-top: 3em;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+  /* line 63, sass/_events.scss */
+  .tribe-events-calendar-buttons {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+  /* line 69, sass/_events.scss */
+  .tribe-events-calendar-widget td a.tribe-events-mini-has-event {
+    cursor: pointer;
+  }
+}
+
+/* line 76, sass/_events.scss */
+#tribe-events #mainContent {
+  border-top-color: #44b87b;
+}
+
+/* line 82, sass/_events.scss */
+.single #tribe-events-pg-template {
+  max-width: none !important;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+  /* line 87, sass/_events.scss */
+  .tribe-events-event-meta .tribe-events-venue-map {
+    width: 95% !important;
+    margin: 20px auto !important;
+    float: none;
+    display: block;
+  }
+}
+
 /* line 2, sass/_photos.scss */
 #photoArchive .banner {
   overflow: hidden;
@@ -3965,7 +4078,6 @@ html, body {
 }
 /* line 14, sass/_pages.scss */
 #page #mainContent .title {
-  text-transform: uppercase;
   font-weight: 600;
   display: block;
   color: #1a1a1a;
@@ -3975,29 +4087,29 @@ html, body {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 20, sass/_pages.scss */
+  /* line 19, sass/_pages.scss */
   #page #mainContent .title h1 {
     font-size: 1.2em;
   }
 }
-/* line 26, sass/_pages.scss */
+/* line 25, sass/_pages.scss */
 #page #mainContent .content {
   min-height: 300px;
   padding-bottom: 30px;
 }
-/* line 29, sass/_pages.scss */
+/* line 28, sass/_pages.scss */
 #page #mainContent .content .text {
   margin-top: 25px;
   line-height: 1.4em;
 }
 
-/* line 36, sass/_pages.scss */
+/* line 35, sass/_pages.scss */
 #map {
   position: relative;
   width: 100%;
   min-height: 400px;
 }
-/* line 40, sass/_pages.scss */
+/* line 39, sass/_pages.scss */
 #map p, #map iframe {
   position: absolute;
   top: 0;

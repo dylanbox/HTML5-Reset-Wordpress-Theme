@@ -1,0 +1,94 @@
+.tribe-events-list-widget-events {
+    list-style: none;
+    background: $white;
+    padding:    0 $columnPadding $columnPadding;
+    margin:     0 0 10px;
+    border-top: 4px solid $green;
+
+
+    .entry-title a {
+        text-transform:  uppercase;
+        color:           $black;
+        text-decoration: none;
+
+    }
+}
+
+.tribe-events-widget-link {
+    text-align: right;
+}
+
+
+#tribe-events-pg-template {
+    background: $white;
+    margin:     0 $columnPadding/2;
+    padding:    0 $columnPadding/2;
+    @include media-query() {
+        max-width:  none !important;
+    }
+    .splash-section {
+        margin-left:  $columnPadding/-2;
+        margin-right: $columnPadding/-2;
+    }
+}
+
+#tribe-bar-views .tribe-bar-views-list {
+    z-index: 1 !important;
+}
+
+#tribe-bar-form input[type="text"][style] {
+    z-index: 1 !important;
+}
+
+#tribe-events-content {
+    @include media-query(550px) {
+        min-width:  550px;
+        background: $white;
+        padding:    2px $columnPadding/2 2px 0 !important;
+    }
+}
+
+.tribe-events-thismonth, .tribe-events-othermonth {
+    @include media-query(480px) {
+        min-width: 50px; max-width:60px;
+    }
+}
+
+#tribe-events-calendar-header {
+    @include media-query(480px) {
+        padding-top: 3em;
+    }
+}
+
+.tribe-events-calendar-buttons {
+    @include media-query(480px) {
+        top:0; left:0;
+    }
+}
+
+.tribe-events-calendar-widget td a.tribe-events-mini-has-event {
+    @include media-query(480px) {
+        cursor: pointer;
+    }
+}
+
+#tribe-events {
+    #mainContent {
+        border-top-color: $green;
+    }
+}
+
+.single {
+    #tribe-events-pg-template {
+        max-width:  none !important;
+    }
+}
+
+.tribe-events-event-meta .tribe-events-venue-map {
+    @include media-query() {
+        width:   95% !important;
+        margin:  20px auto !important;
+        float:   none;
+        display: block;
+    }
+}

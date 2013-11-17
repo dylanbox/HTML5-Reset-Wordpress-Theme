@@ -48,7 +48,7 @@ get_header(); ?>
                 <?php endif; ?>
                 <div class="content">
                     <a href="<?php the_permalink(); ?>" class="title">
-                        <h2><?php the_title(); ?></h2>
+                        <h4><?php the_title(); ?></h4>
                     </a>
                     <div class="info">
                         <div class="category">
@@ -76,8 +76,7 @@ get_header(); ?>
 
 
     <div id="events" class="large-4 small-12 columns">
-            <a href="<?php echo get_site_url(); ?>/events" class="banner">Upcoming Events</a>
-            <?php dynamic_sidebar( 'Events Widget Location' ); ?>
+        <?php dynamic_sidebar( 'Events Widget Location' ); ?>
     </div>
 
 
