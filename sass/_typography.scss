@@ -68,16 +68,18 @@ a {
 }
 
 .banner {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-family: $headerFontFamily;
-    font-weight: 600;
-    color: $white;
-    background: $darkBlue;
-    text-transform: uppercase;
+    padding-top:     5px;
+    padding-bottom:  5px;
+    text-align:      center;
+    font-family:     $headerFontFamily;
+    font-weight:     600;
+    color:           $white;
+    background:      $darkBlue;
+    text-transform:  uppercase;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size:       1.5em;
+    width:           100%;
+    display:         block;
     @include transition(.2s);
     &:hover {
         background: darken($grey, 10%);

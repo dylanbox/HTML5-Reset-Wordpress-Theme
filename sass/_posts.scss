@@ -103,30 +103,9 @@
     #mainContent {
         overflow: visible;
     }
-    .first-post.post {
-        border-top: none;
-        @include media-query() {
-            position: relative;
-            bottom: auto;
-            margin-top: 0;
-        }
-        .content {
-            .title {
-                h1 {
-                    background: $purple;
-                    padding: $columnPadding;
-                    color: $white;
-                    margin: 0 -1*$columnPadding;
-                    @include media-query() {
-                        font-size: 1em;
-                        padding: $columnPadding/2;
-                    }
-                }
-                &:hover h1 {
-                    background: darken($purple, 10%);
-                }
-            }
-        }
+
+    .post {
+        margin: 0;
     }
 }
 
@@ -167,10 +146,6 @@
             border-top: none;
         }
     }
-}
-
-#posts {
-    padding-top: $columnPadding/2;
 }
 
 .post {

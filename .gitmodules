@@ -1,0 +1,3 @@
+[submodule "include-plugin"]
+	path = include-plugin
+	url = https://dylanbox@github.com/thomasgriffin/TGM-Plugin-Activation.git
