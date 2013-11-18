@@ -127,15 +127,6 @@
     	) );
 
     	register_sidebar( array(
-    		'name' => 'Events Sidebar',
-    		'id' => 'sidebar-events',
-    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    		'after_widget' => '</aside>',
-    		'before_title' => '<h3 class="widget-title">',
-    		'after_title' => '</h3>',
-    	) );
-
-    	register_sidebar( array(
     		'name' => 'Header Description',
     		'id' => 'header-description',
     		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
