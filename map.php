@@ -8,7 +8,7 @@ Template Name: Map Template
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php if (has_post_thumbnail()) : ?>
             <?php
-                $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='thumbnail' );
+                $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='fullscreen-background' );
             ?>
             <?php echo '<div class="splash-section full-background" style="background-image:url('. $splash_src[0] .');">'?></div>
         <?php endif; ?>

@@ -18,7 +18,11 @@
 			<div class="post">
                 <?php if (has_post_thumbnail()) : ?>
                     <a href="<?php the_permalink(); ?>" class="image-box">
-                        <?php echo '<div href="" class="full-background image" style="background-image:url('. wp_get_attachment_url(get_post_thumbnail_id()) .');">'?></div>
+                        <?php
+                            $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='preview-thumbnail' );
+                        ?>
+
+                        <?php echo '<div href="" class="full-background image" style="background-image:url('. $splash_src[0] .');">'?></div>
                     </a>
                 <?php endif; ?>
                 <div class="content">
