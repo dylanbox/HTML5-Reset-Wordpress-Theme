@@ -35,20 +35,23 @@
                 }
             }
             &.about a:before {
-                content: $info-sign;
+                content: $fa-var-info-circle;
             }
             &.team a:before {
-                content: $group;
+                content: $fa-var-users;
             }
             &.contact a:before {
-                content: $phone;
+                content: $fa-var-phone;
             }
             &.resources a:before {
-                content: $briefcase;
+                content: $fa-var-briefcase;
             }
             &.login a:before {
-                content: $unlock-alt;
+                content: $fa-var-unlock-alt;
             }
+        }
+        .sub-menu {
+            display: none;
         }
     }
 }

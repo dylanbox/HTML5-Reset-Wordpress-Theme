@@ -63,7 +63,7 @@ $event_id = get_the_ID();
                 <?php post_navigation(); ?>
             </div>
             <div class="large-4 columns" id="sidebar">
-                <?php dynamic_sidebar( 'Events Widget Location' ); ?>
+                <?php dynamic_sidebar( 'Events Sidebar' ); ?>
             </div>
 
             <!-- Event footer -->

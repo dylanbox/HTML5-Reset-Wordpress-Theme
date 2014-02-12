@@ -136,20 +136,20 @@
     	) );
 
     	register_sidebar( array(
-    		'name' => 'Homepage Description',
-    		'id' => 'homepage-description',
-    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    		'after_widget' => '</aside>',
+    		'name' => 'Homepage Widgets',
+    		'id' => 'homepage-Widgets',
+    		'before_widget' => '<aside id="%1$s" class="widget %2$s large-4 columns"><div class="widget-container">',
+    		'after_widget' => '</div></aside>',
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
     	) );
 
     	register_sidebar( array(
-    		'name' => 'Events Widget Location',
-    		'id' => 'events-widget',
+    		'name' => 'Events Sidebar',
+    		'id' => 'events-sidebar',
     		'before_widget' => '',
     		'after_widget' => '',
-    		'before_title' => '<a href="<?php echo get_site_url(); ?>/events" class="banner">',
+    		'before_title' => '<a href="'. get_site_url() .'/events" class="banner">',
     		'after_title' => '</a>',
     	) );
 
@@ -178,8 +178,9 @@
     //New Image Sizes
 
     add_theme_support('post-thumbnails');
-    add_image_size('fullscreen-background', 1250, 538, true );
-    add_image_size('preview-thumbnail', 661, 256);
+    add_image_size('fullscreen-background', 1250, 500, true);
+    add_image_size('preview-thumbnail', 661, 256, true);
+    add_image_size('small-thumbnail', 315, 122, true);
 
     //Excerpt Changing
 
@@ -281,6 +282,14 @@
     	tgmpa( $plugins, $config );
 
     }
+
+
+    // Javascripts
+    function osborn_scripts() {
+        wp_enqueue_script( 'header-script', get_template_directory_uri() . '/js/header.js', array(), '1.0.0', true );
+    }
+
+    add_action( 'wp_enqueue_scripts', 'osborn_scripts' );
 
 
 ?>

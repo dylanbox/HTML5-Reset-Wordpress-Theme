@@ -14,14 +14,11 @@ get_header(); ?>
             <?php while (have_posts()) : the_post(); ?>
 
                 <div class="post">
-                    <a href="<?php the_permalink(); ?>" class="image-box">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <?php
-                                $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='preview-thumbnail' );
-                            ?>
-                            <?php echo '<div class="full-background image" style="background-image:url('. $splash_src[0] .');">'?></div>
-                        <?php endif; ?>
-                    </a>
+                    <?php if (has_post_thumbnail()) : ?>
+                        <a href="<?php the_permalink(); ?>" class="image-box">
+                            <?php the_post_thumbnail( 'preview-thumbnail' ); ?>
+                        </a>
+                    <?php endif; ?>
                     <div class="content">
                         <a href="<?php the_permalink(); ?>" class="title">
                             <h2><?php the_title(); ?></h2>

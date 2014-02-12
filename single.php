@@ -27,9 +27,9 @@
 <?php endwhile; endif; ?>
                 <?php post_navigation(); ?>
             </div>
-            <div class="large-4 columns" id="sidebar">
+            <aside class="large-4 columns" id="sideColumn">
                 <?php get_sidebar(); ?>
-            </div>
+            </aside>
         </div>
 
 <?php get_footer(); ?>

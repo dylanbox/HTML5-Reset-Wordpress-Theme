@@ -1,0 +1,66 @@
+.homepage-widgets {
+    padding: 20px 0;
+    .widget {
+        float:          none;
+        display:        inline-block;
+        vertical-align: top;
+        margin-bottom:  30px;
+        @include media-query() {
+            display: block;
+        }
+        .widget-container {
+            padding-bottom: 25px;
+            @include media-query() {
+                border-bottom:  1px solid $grey-2;
+            }
+            @include clearfix();
+        }
+        img {
+            margin-bottom: 10px;
+            &.alignleft {
+                @include media-query(615px) {
+                    float:   none;
+                    display: block;
+                    margin:  0 auto 15px;
+                }
+            }
+        }
+        p {
+            font-size:     1em;
+            color:         $grey-5;
+            margin-bottom: 0px;
+        }
+        .widget-title {
+            font-size: 1.4em;
+            margin:    12px 0;
+        }
+    }
+
+    .widget_recent_entries {
+        li {
+            margin-bottom: 20px;
+            padding-top:   5px;
+            border-top:    4px solid $blue;
+            a {
+                font-family:    $headerFontFamily;
+                color:          $black;
+                text-transform: uppercase;
+                display:        block;
+            }
+        }
+        .post-date {
+            font-size:      .9em;
+            color:          $grey-6;
+        }
+    }
+}
+
+.blog, .archive, .single-post {
+    #sideColumn {
+        padding-left: $columnPadding;
+        .widget {
+            padding-bottom: 10px;
+            border-bottom:  4px solid $blue;
+        }
+    }
+}
