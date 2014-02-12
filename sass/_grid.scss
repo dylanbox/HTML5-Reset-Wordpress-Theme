@@ -1,7 +1,7 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-    @include at2x(cream_pixels, 160px, 160px, '.png');
+    @include at2x(cream_pixels_bkg, 160px, 160px, '.png');
 }
 
 .row {
