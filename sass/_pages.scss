@@ -57,9 +57,11 @@
         background: rgba($black, .5);
     }
     .ie-lt9 & {
-        background:transparent;
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
-        zoom: 1;
+        .transparent-cover {
+            background:transparent;
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+            zoom: 1;
+        }
     }
 }
 
