@@ -9,9 +9,11 @@ get_header(); ?>
             $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='fullscreen-background' );
         ?>
         <?php echo '<div class="splash-section full-background" style="background-image:url('. $splash_src[0] .');">'?>
-            <div id="homepageDescription">
-                <div class="homepage-content">
-    		        <?php the_content(); ?>
+            <div class="transparent-cover">
+                <div id="homepageDescription">
+                    <div class="homepage-content">
+                        <?php the_content(); ?>
+                    </div>
                 </div>
 		    </div>
         </div>

@@ -47,8 +47,20 @@
     }
 }
 
-.home .splash-section{
-    width: 100%;
+.home {
+    .splash-section {
+        width: 100%;
+    }
+    .transparent-cover {
+        width:   100%;
+        display: block;
+        background: rgba($black, .5);
+    }
+    .lt-ie9 & {
+        background:transparent;
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+        zoom: 1;
+    }
 }
 
 #homepageDescription {
