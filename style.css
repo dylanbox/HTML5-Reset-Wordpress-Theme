@@ -4126,7 +4126,7 @@ html, body {
   background: rgba(0, 0, 0, 0.5);
 }
 /* line 59, sass/_pages.scss */
-.lt-ie9 .home {
+.ie-lt9 .home {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
   zoom: 1;
