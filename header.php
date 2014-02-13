@@ -16,7 +16,7 @@
 <head id="<?php echo of_get_option('meta_headid'); ?>" data-template-set="html5-reset-wordpress-theme">
 
 	<meta charset="<?php bloginfo('charset'); ?>">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 	<!--[if IE ]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

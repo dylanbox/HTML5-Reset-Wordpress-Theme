@@ -3262,6 +3262,7 @@ img {
   left: 0;
   z-index: 50;
   width: 100%;
+  border-bottom: 1px solid #cccccc;
   -webkit-box-shadow: 0 -2px 10px black;
   -moz-box-shadow: 0 -2px 10px black;
   box-shadow: 0 -2px 10px black;
@@ -3276,7 +3277,7 @@ img {
     position: relative;
   }
 }
-/* line 12, sass/_header.scss */
+/* line 13, sass/_header.scss */
 #header a {
   text-decoration: none;
   color: #0c1927;
@@ -3286,7 +3287,7 @@ img {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 18, sass/_header.scss */
+/* line 19, sass/_header.scss */
 #header .logo {
   float: left;
   margin: 0;
@@ -3295,15 +3296,15 @@ img {
   font-size: 30px;
   text-transform: uppercase;
 }
-/* line 25, sass/_header.scss */
+/* line 26, sass/_header.scss */
 #header .logo a {
   padding: 11px 8px 10px;
 }
-/* line 29, sass/_header.scss */
+/* line 30, sass/_header.scss */
 #header .header-row {
   overflow: visible;
 }
-/* line 33, sass/_header.scss */
+/* line 34, sass/_header.scss */
 #header #headerContent {
   padding: 0 16px 16px;
   clear: left;
@@ -3313,26 +3314,26 @@ img {
   -o-transition: max-height 0.5s;
   transition: max-height 0.5s;
 }
-/* line 38, sass/_header.scss */
+/* line 39, sass/_header.scss */
 #header #headerContent i {
   margin: 0 5px;
 }
-/* line 42, sass/_header.scss */
+/* line 43, sass/_header.scss */
 #header #fullNav {
   margin-top: 16px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 42, sass/_header.scss */
+  /* line 43, sass/_header.scss */
   #header #fullNav {
     display: none;
   }
 }
-/* line 47, sass/_header.scss */
+/* line 48, sass/_header.scss */
 #header #fullNav li {
   float: left;
   position: relative;
 }
-/* line 50, sass/_header.scss */
+/* line 51, sass/_header.scss */
 #header #fullNav li a {
   padding: 20px 10px;
   text-decoration: none;
@@ -3347,12 +3348,12 @@ img {
   transition: 0.5s;
 }
 @media only screen and (max-width: 870px) and (min-width: 0px) {
-  /* line 50, sass/_header.scss */
+  /* line 51, sass/_header.scss */
   #header #fullNav li a {
     min-width: 1px;
   }
 }
-/* line 62, sass/_header.scss */
+/* line 63, sass/_header.scss */
 #header #fullNav li a:before {
   font-family: "FontAwesome";
   font-style: normal;
@@ -3373,11 +3374,12 @@ img {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 79, sass/_header.scss */
+/* line 80, sass/_header.scss */
 #header #fullNav li a:hover {
   text-decoration: none;
+  background: #254b75;
 }
-/* line 81, sass/_header.scss */
+/* line 84, sass/_header.scss */
 #header #fullNav li a:hover:before {
   top: -100%;
   -webkit-transition: 0.2s;
@@ -3385,61 +3387,61 @@ img {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 87, sass/_header.scss */
+/* line 90, sass/_header.scss */
 #header #fullNav li.about > a:before {
   content: "\f05a";
 }
-/* line 90, sass/_header.scss */
+/* line 93, sass/_header.scss */
 #header #fullNav li.team > a:before {
   content: "\f0c0";
 }
-/* line 93, sass/_header.scss */
+/* line 96, sass/_header.scss */
 #header #fullNav li.contact > a:before {
   content: "\f095";
 }
-/* line 96, sass/_header.scss */
+/* line 99, sass/_header.scss */
 #header #fullNav li.map > a:before {
   content: "\f041";
 }
-/* line 99, sass/_header.scss */
+/* line 102, sass/_header.scss */
 #header #fullNav li.links > a:before {
   content: "\f0c1";
 }
-/* line 102, sass/_header.scss */
+/* line 105, sass/_header.scss */
 #header #fullNav li.blog > a:before {
   content: "\f0e6";
 }
-/* line 105, sass/_header.scss */
+/* line 108, sass/_header.scss */
 #header #fullNav li.events > a:before {
   content: "\f073";
 }
-/* line 108, sass/_header.scss */
+/* line 111, sass/_header.scss */
 #header #fullNav li.resources > a:before {
   content: "\f0b1";
 }
-/* line 111, sass/_header.scss */
+/* line 114, sass/_header.scss */
 #header #fullNav li.login > a:before {
   content: "\f13e";
 }
 @media only screen and (max-width: 870px) and (min-width: 0px) {
-  /* line 114, sass/_header.scss */
+  /* line 117, sass/_header.scss */
   #header #fullNav li.donate > a {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
-/* line 119, sass/_header.scss */
+/* line 122, sass/_header.scss */
 #header #fullNav li.donate > a:before {
   content: 'Donate';
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   font-size: 1.1em;
 }
-/* line 126, sass/_header.scss */
+/* line 129, sass/_header.scss */
 #header #fullNav li:hover .sub-menu {
   display: block;
 }
-/* line 130, sass/_header.scss */
+/* line 133, sass/_header.scss */
 #header #fullNav .sub-menu {
   position: absolute;
   display: none;
@@ -3450,46 +3452,47 @@ img {
   border: 1px solid #cccccc;
   border-top: none;
 }
-/* line 141, sass/_header.scss */
-#header #fullNav .sub-menu a:hover:before {
-  top: 0%;
-  left: -100%;
+/* line 143, sass/_header.scss */
+#header #fullNav .sub-menu a:before {
+  display: none;
 }
-/* line 150, sass/_header.scss */
-#header.collapse {
-  background: #0c1927;
-}
-/* line 152, sass/_header.scss */
-#header.collapse a {
-  color: white;
-}
-/* line 155, sass/_header.scss */
-#header.collapse #headerContent {
-  max-height: 0;
-  visibility: hidden;
-  padding: 0px;
-  clear: none;
-}
-/* line 161, sass/_header.scss */
-#header.collapse #nav {
-  margin-top: 0;
-}
-/* line 163, sass/_header.scss */
-#header.collapse #nav li a {
-  background: white;
-  color: #0c1927;
-}
-/* line 166, sass/_header.scss */
-#header.collapse #nav li a:before {
-  background: #0c1927;
-  color: white;
-}
-/* line 172, sass/_header.scss */
-#header.collapse #fullNav {
-  margin-top: 0px;
+@media screen and (min-width: 768px) {
+  /* line 150, sass/_header.scss */
+  #header.collapse {
+    background: #0c1927;
+  }
+  /* line 152, sass/_header.scss */
+  #header.collapse a {
+    color: white;
+  }
+  /* line 155, sass/_header.scss */
+  #header.collapse #headerContent {
+    max-height: 0;
+    visibility: hidden;
+    padding: 0px;
+    clear: none;
+  }
+  /* line 161, sass/_header.scss */
+  #header.collapse #nav {
+    margin-top: 0;
+  }
+  /* line 163, sass/_header.scss */
+  #header.collapse #nav li a {
+    background: white;
+    color: #0c1927;
+  }
+  /* line 166, sass/_header.scss */
+  #header.collapse #nav li a:before {
+    background: #0c1927;
+    color: white;
+  }
+  /* line 172, sass/_header.scss */
+  #header.collapse #fullNav {
+    margin-top: 0px;
+  }
 }
 
-/* line 178, sass/_header.scss */
+/* line 179, sass/_header.scss */
 #mobileNavButton {
   float: right;
   padding: 15px 20px 10px 10px;
@@ -3497,17 +3500,17 @@ img {
   display: none;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 178, sass/_header.scss */
+  /* line 179, sass/_header.scss */
   #mobileNavButton {
     display: block;
   }
 }
-/* line 186, sass/_header.scss */
+/* line 187, sass/_header.scss */
 #mobileNavButton i {
   font-size: 2em;
 }
 
-/* line 191, sass/_header.scss */
+/* line 192, sass/_header.scss */
 #mobileNav {
   display: block;
   padding-top: 15px;
@@ -3524,13 +3527,13 @@ img {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 204, sass/_header.scss */
+/* line 205, sass/_header.scss */
 #mobileNav.active {
   display: block;
   left: 25%;
   opacity: 1;
 }
-/* line 209, sass/_header.scss */
+/* line 210, sass/_header.scss */
 #mobileNav a {
   text-decoration: none;
   padding: 8px 5px;
@@ -3538,17 +3541,17 @@ img {
   color: white;
   font-size: 1.3em;
 }
-/* line 216, sass/_header.scss */
+/* line 217, sass/_header.scss */
 #mobileNav .sub-menu {
   padding-left: 8px;
 }
-/* line 218, sass/_header.scss */
+/* line 219, sass/_header.scss */
 #mobileNav .sub-menu a {
   font-size: 1em;
   color: #e6e6e6;
 }
 
-/* line 225, sass/_header.scss */
+/* line 226, sass/_header.scss */
 #pageWrapper {
   position: relative;
   z-index: 1;
@@ -3559,14 +3562,14 @@ img {
   transition: 0.5s;
 }
 
-/* line 232, sass/_header.scss */
+/* line 233, sass/_header.scss */
 #mobileNav.active + #pageWrapper {
   position: absolute;
   width: 100%;
   height: 100%;
   right: 75%;
 }
-/* line 237, sass/_header.scss */
+/* line 238, sass/_header.scss */
 #mobileNav.active + #pageWrapper:after {
   content: '';
   display: block;
@@ -3874,7 +3877,7 @@ html, body {
 .tribe-events-list-widget-events {
   list-style: none;
   background: white;
-  padding: 0 16px 16px;
+  padding: 0 0 16px;
   margin: 0 0 10px;
   border-top: 4px solid #44b87b;
 }
@@ -3883,43 +3886,50 @@ html, body {
   text-transform: uppercase;
   color: black;
   text-decoration: none;
+  letter-spacing: 0px;
+}
+/* line 21, sass/_events.scss */
+.tribe-events-list-widget-events .duration {
+  font-size: .9em;
+  color: #666666;
+  font-weight: normal !important;
 }
 
-/* line 21, sass/_events.scss */
+/* line 28, sass/_events.scss */
 .tribe-events-widget-link {
   text-align: right;
 }
 
-/* line 26, sass/_events.scss */
+/* line 33, sass/_events.scss */
 #tribe-events-pg-template {
   background: white;
   margin: 0 8px;
   padding: 0 8px;
 }
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 26, sass/_events.scss */
+  /* line 33, sass/_events.scss */
   #tribe-events-pg-template {
     max-width: none !important;
   }
 }
-/* line 33, sass/_events.scss */
+/* line 40, sass/_events.scss */
 #tribe-events-pg-template .splash-section {
   margin-left: -8px;
   margin-right: -8px;
 }
 
-/* line 39, sass/_events.scss */
+/* line 46, sass/_events.scss */
 #tribe-bar-views .tribe-bar-views-list {
   z-index: 1 !important;
 }
 
-/* line 43, sass/_events.scss */
+/* line 50, sass/_events.scss */
 #tribe-bar-form input[type="text"][style] {
   z-index: 1 !important;
 }
 
 @media only screen and (max-width: 550px) and (min-width: 0px) {
-  /* line 47, sass/_events.scss */
+  /* line 54, sass/_events.scss */
   #tribe-events-content {
     min-width: 550px;
     background: white;
@@ -3928,7 +3938,7 @@ html, body {
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0px) {
-  /* line 55, sass/_events.scss */
+  /* line 62, sass/_events.scss */
   .tribe-events-thismonth, .tribe-events-othermonth {
     min-width: 50px;
     max-width: 60px;
@@ -3936,14 +3946,14 @@ html, body {
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0px) {
-  /* line 61, sass/_events.scss */
+  /* line 68, sass/_events.scss */
   #tribe-events-calendar-header {
     padding-top: 3em;
   }
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0px) {
-  /* line 67, sass/_events.scss */
+  /* line 74, sass/_events.scss */
   .tribe-events-calendar-buttons {
     top: 0;
     left: 0;
@@ -3951,24 +3961,24 @@ html, body {
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0px) {
-  /* line 73, sass/_events.scss */
+  /* line 80, sass/_events.scss */
   .tribe-events-calendar-widget td a.tribe-events-mini-has-event {
     cursor: pointer;
   }
 }
 
-/* line 80, sass/_events.scss */
+/* line 87, sass/_events.scss */
 #tribe-events #mainContent {
   border-top-color: #44b87b;
 }
 
-/* line 86, sass/_events.scss */
+/* line 93, sass/_events.scss */
 .single #tribe-events-pg-template {
   max-width: none !important;
 }
 
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 91, sass/_events.scss */
+  /* line 98, sass/_events.scss */
   .tribe-events-event-meta .tribe-events-venue-map {
     width: 95% !important;
     margin: 20px auto !important;
@@ -4145,8 +4155,26 @@ html, body {
 #homepageDescription .homepage-content h1 {
   font-size: 2.5em;
 }
+@media only screen and (max-width: 767px) and (min-width: 550px) {
+  /* line 75, sass/_pages.scss */
+  #homepageDescription .homepage-content h1 {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (max-width: 549px) and (min-width: 0px) {
+  /* line 75, sass/_pages.scss */
+  #homepageDescription .homepage-content h1 {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (max-width: 549px) and (min-width: 0px) {
+  /* line 84, sass/_pages.scss */
+  #homepageDescription .homepage-content p {
+    font-size: .9em;
+  }
+}
 
-/* line 81, sass/_pages.scss */
+/* line 92, sass/_pages.scss */
 .home #mainContent {
   padding-bottom: 0px;
 }
@@ -4288,20 +4316,21 @@ ol.commentlist li.parent {
 .homepage-widgets .widget_recent_entries li a {
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: black;
+  text-decoration: none;
   text-transform: uppercase;
   display: block;
 }
-/* line 51, sass/_widgets.scss */
+/* line 52, sass/_widgets.scss */
 .homepage-widgets .widget_recent_entries .post-date {
   font-size: .9em;
   color: #666666;
 }
 
-/* line 59, sass/_widgets.scss */
+/* line 60, sass/_widgets.scss */
 .blog #sideColumn, .archive #sideColumn, .single-post #sideColumn {
   padding-left: 16px;
 }
-/* line 61, sass/_widgets.scss */
+/* line 62, sass/_widgets.scss */
 .blog #sideColumn .widget, .archive #sideColumn .widget, .single-post #sideColumn .widget {
   padding-bottom: 10px;
   border-bottom: 4px solid #518ac8;

@@ -5,7 +5,7 @@
 .tribe-events-list-widget-events {
     list-style: none;
     background: $white;
-    padding:    0 $columnPadding $columnPadding;
+    padding:    0 0 $columnPadding;
     margin:     0 0 10px;
     border-top: 4px solid $green;
 
@@ -14,7 +14,14 @@
         text-transform:  uppercase;
         color:           $black;
         text-decoration: none;
+        letter-spacing:  0px;
 
+    }
+
+    .duration {
+        font-size:    .9em;
+        color:        $grey-6;
+        font-weight:  normal !important;
     }
 }
 
