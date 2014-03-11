@@ -194,7 +194,8 @@
       return $excerpt;
     }
 
-    include 'photos/photos.php';
+    // Temp. removing photos
+    //include 'photos/photos.php';
     include 'infinite-scroll.php';
 
 
@@ -278,6 +279,17 @@
     }
 
     add_action( 'wp_enqueue_scripts', 'osborn_scripts' );
+
+    // Add Page Slug to Body Class
+    function add_body_class( $classes ) {
+        global $post;
+        if ( isset( $post ) ) {
+            $classes[] = $post->post_type . '-' . $post->post_name;
+        }
+        return $classes;
+    }
+
+    add_filter( 'body_class', 'add_body_class' );
 
 
 ?>

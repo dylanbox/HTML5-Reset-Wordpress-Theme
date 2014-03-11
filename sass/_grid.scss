@@ -85,6 +85,27 @@ body {
     }
 }
 
+@mixin column($num) {
+    width: percentage($num/$gridColumns);
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 $columnPadding/2;
+    @include media-query() {
+        width: 100%;
+    }
+}
+
+@mixin mobileColumn($num) {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 $columnPadding/2;
+    @include media-query() {
+        width: percentage($num/$gridColumns) !important;
+    }
+}
+
 .hide-for-small {
     @include media-query() {
         display: none;
@@ -136,7 +157,8 @@ img {
 	margin-right: auto;
 }
 
-@mixin clearfix() { *zoom:1;
-&:before, &:after { content: " "; display: table; }
-&:after { clear: both; }
+@mixin clearfix() {
+    *zoom:1;
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
 }

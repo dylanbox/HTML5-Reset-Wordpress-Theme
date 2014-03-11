@@ -140,9 +140,13 @@
             border:     1px solid $grey-2;
             border-top: none;
             a {
+                width: 100%;
                 &:before {
                     display: none;
                 }
+            }
+            li {
+                width: 100%;
             }
         }
     }

@@ -46,9 +46,11 @@
 .post {
     overflow-y: visible;
     background: $white;
-    padding: 0 $columnPadding $columnPadding;
-    margin: 0 $columnPadding/-2;
+    padding:    0 $columnPadding $columnPadding;
+    margin:     $columnPadding;
+    border :    1px solid $grey-2;
     border-top: 4px solid $blue;
+    @include border-radius(4px);
     .image-box {
         margin: 0 -1*$columnPadding;
         display: block;
