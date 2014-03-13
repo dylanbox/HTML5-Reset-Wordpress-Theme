@@ -11,6 +11,15 @@
 
 #page #mainContent {
     border-top: 4px solid $blue;
+    width: 850px;
+    margin: 0 auto;
+    @include media-query(1000px, 867px) {
+        width: 850px;
+    }
+    @include media-query(866px) {
+        width: auto;
+        margin: 0 8px;
+    }
     .title {
         font-weight: 600;
         display: block;
@@ -100,6 +109,13 @@
                 font-size: .9em;
             }
         }
+
+        h1, p {
+            width: 650px;
+            @include media-query() {
+                width: auto;
+            }
+        }
     }
 }
 
@@ -115,7 +131,7 @@
     }
     li {
         text-align: center;
-        @include column(3);
+        @include column(4);
         @include media-query(767px, 550px) {
             @include mobileColumn(6);
         }
