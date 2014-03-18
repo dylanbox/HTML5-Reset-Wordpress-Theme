@@ -125,11 +125,10 @@
 
 // Adding special formatting and "Bubble-image" to team page photos
 // This is a terrible idea and I am going to regret it in the future.
-.page-team .content {
-    ul {
-        @include clearfix();
-    }
-    li {
+.page-team .content .text {
+    @include clearfix();
+
+    .wp-caption {
         text-align: center;
         @include column(4);
         @include media-query(767px, 550px) {
@@ -138,12 +137,12 @@
         @include media-query(549px) {
             @include mobileColumn(12);
         }
-    }
-    img {
-        width:   200px;
-        display: block;
-        margin:  0 auto;
-        border:  1px solid $grey-2;
-        @include border-radius(100px);
+        img {
+            width:   200px;
+            display: block;
+            margin:  0 auto;
+            border:  1px solid $grey-2;
+            @include border-radius(100px);
+        }
     }
 }
