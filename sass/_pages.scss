@@ -131,11 +131,16 @@
     .wp-caption {
         text-align: center;
         @include column(4);
+        width:      percentage(1/3) !important;
+        clear:      none;
+        margin:     0 !important;
         @include media-query(767px, 550px) {
             @include mobileColumn(6);
+            width: 50% !important;
         }
         @include media-query(549px) {
             @include mobileColumn(12);
+            width: 100% !important;
         }
         img {
             width:   200px;
