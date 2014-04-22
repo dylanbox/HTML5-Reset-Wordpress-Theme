@@ -103,3 +103,19 @@
         display: block;
     }
 }
+
+.tribe-events-event-meta .tribe-events-meta-group, .tribe-events-event-meta .column, .single-tribe_events .tribe-events-venue-map {
+    float:   none  !important;
+    width:   auto  !important;
+    display: block !important;
+}
+
+.single-tribe_events .tribe-events-venue-map {
+    margin: $columnPadding/2 !important;
+}
+
+.tribe-events-meta-group {
+    dt {
+        font-weight: bold;
+    }
+}

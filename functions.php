@@ -132,15 +132,6 @@
     		'after_title' => '</h3>',
     	) );
 
-    	register_sidebar( array(
-    		'name' => 'Events Sidebar',
-    		'id' => 'events-sidebar',
-    		'before_widget' => '',
-    		'after_widget' => '',
-    		'before_title' => '<a href="'. get_site_url() .'/events" class="banner">',
-    		'after_title' => '</a>',
-    	) );
-
     }
     add_action( 'widgets_init', 'html5reset_widgets_init' );
 

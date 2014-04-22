@@ -46,10 +46,6 @@ $event_id = get_the_ID();
         			</div><!-- .tribe-events-single-event-description -->
         			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 
-        			<!-- Event meta -->
-        			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-        				<?php echo tribe_events_single_event_meta() ?>
-        			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 
         			<div class="tags">
 					   	<p><?php the_tags('Tags:',''); ?></p>
@@ -59,12 +55,16 @@ $event_id = get_the_ID();
 
         		<?php if( get_post_type() == TribeEvents::POSTTYPE && tribe_get_option( 'showComments','no' ) == 'yes' ) { comments_template(); } ?>
 
-<?php endwhile; endif; ?>
                 <?php post_navigation(); ?>
             </div>
-            <div class="large-4 columns" id="sidebar">
-                <?php dynamic_sidebar( 'Events Sidebar' ); ?>
-            </div>
+            <aside class="large-4 columns" id="sidebar">
+                <!-- Event meta -->
+                <?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+                    <?php echo tribe_events_single_event_meta() ?>
+                <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+
+            </aside>
+<?php endwhile; endif; ?>
 
             <!-- Event footer -->
             <div id="tribe-events-footer">
